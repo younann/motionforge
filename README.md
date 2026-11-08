@@ -1,88 +1,121 @@
+<div align="center">
+
 # MotionForge
 
-A Claude Code plugin that opens a local studio for making short animated ad videos (up to 30 seconds).
+**Product ad videos from a single sentence, inside Claude Code.**
 
-Describe the ad, or attach an image. Claude designs the scenes and generates product and lifestyle images. It builds live app and website screens in device frames, adds effects, motion, music and sound effects, then reviews rendered frames and polishes them. The result lands on a timeline where you trim, reorder, crop, retime and restyle by hand, then you export a high-quality MP4.
+Describe your product or drop in a photo. MotionForge writes the story, generates the imagery, builds live app screens, scores it with music and sound effects, and hands you a timeline to finish it.
 
-Generation runs through **your own installed Claude Code CLI**. There's no API key, no cloud backend, and nothing leaves your machine except your normal Claude Code requests.
+<!-- DEMO: replace this comment with the demo video made with /brag -->
 
-## Requirements
+<br>
 
-| Needed for | Requirement |
-|---|---|
-| Everything | Node.js 20+ |
-| Generating | Claude Code CLI, installed and logged in |
-| Exporting | ffmpeg (with ffprobe) and Google Chrome or another Chromium browser |
+[![License: MIT](https://img.shields.io/badge/license-MIT-f2b33d?style=flat-square)](LICENSE)
+[![Claude Code plugin](https://img.shields.io/badge/Claude_Code-plugin-1b1b1e?style=flat-square)](https://code.claude.com/docs/en/plugins)
+[![Node 20+](https://img.shields.io/badge/node-%E2%89%A520-1b1b1e?style=flat-square)](https://nodejs.org)
+[![Export](https://img.shields.io/badge/export-MP4%20up%20to%204K-1b1b1e?style=flat-square)](#export)
 
-Run `node scripts/doctor.mjs` to check them.
+</div>
 
-## Install
+<br>
+
+![Frames from three ads made with MotionForge: a banking app, a coffee ordering app and a skincare serum](docs/media/gallery.jpg)
+
+<p align="center"><sub>Frames from three generated ads: <i>Penny</i> (banking app), <i>Brewly</i> (coffee ordering app) and <i>Lumen</i> (skincare serum). Every brand here is invented.</sub></p>
+
+## Quick start
 
 ```bash
 claude plugin marketplace add younann/motionforge
 claude plugin install motionforge@motionforge-marketplace
 ```
 
-Then type `/motionforge:open` in Claude Code. The studio opens in your browser.
+Then type **`/motionforge:open`** in Claude Code. The studio opens in your browser.
 
-For local development: `claude --plugin-dir /path/to/motionforge-plugin`, or `node scripts/launch.mjs` directly (`--no-open` skips opening the browser).
+Type what you want, for example *"A 15-second ad for Brewly, an app to order coffee ahead from local cafés"*, and press **Make it**. A few minutes later you have a finished ad on a timeline.
 
-## Using the studio
+> Generation runs through **your own Claude Code CLI**. There's no API key to add and no backend to sign up for.
 
-- **Simple mode**: type what you want, choose the format (9:16, 1:1, 4:5, 16:9), length and style, then press *Make it*. Attach an image and choose **In the scene** (feature it in the ad) or **Rebuild it as animation** (recreate a static design as live, editable layers).
-- **Editor mode**: Claude chat on the left, preview in the middle, inspector on the right, and a timeline with scene, music, effects and voice tracks.
-  - Drag scenes to reorder them. Drag clip edges to trim or extend. Split at the playhead (`S`), duplicate (`⌘D`), delete (`⌫`), undo (`⌘Z`).
-  - Click an element in the preview to edit its text, font, color, position and animation. Drag it to move it.
-  - Select a scene and choose **Ask Claude**, or set the chat scope to the scene, to regenerate only that scene.
-  - The Audio tab has bundled music and sound effects. The Media tab takes your images and audio, including voiceover recordings.
-- **Settings** (sliders icon in the top bar): choose the image source and its token, and switch the polish pass on or off.
-- **Export**: 720p, 1080p or 4K at 30 or 60 fps, as H.264 MP4 with AAC audio. Files are saved in `~/.motionforge/projects/<id>/exports/`.
-- **Pro mode** (layer and keyframe editing) is coming next. The data model already supports keyframes.
+## What it makes
 
-## What Claude can put on screen
+MotionForge doesn't stop at kinetic text over music. Every ad is built from real visual material:
 
-| Layer | What it's for |
+| | |
 |---|---|
-| `image` with `prompt` | Generated product shots, lifestyle scenes, backgrounds |
-| `image` with `src` | Your own uploaded photos |
-| `ui` | Real HTML/CSS app and website screens in iPhone, Android, tablet, browser or laptop frames. Time-driven taps, typing (`data-type`), counters (`data-count`), state changes (`data-at` → `--k`) and scrolling |
-| `cursor` | Pointer, hand or finger with press and ripple taps for UI demos |
-| `effect` | Built-in confetti, sparkles, bokeh, rays, speed lines, light leak, dust, glow orbs, grid, waves, snow, stars, shockwave, scanlines |
-| `text`, `shape`, `background`, `code` | Kinetic type, badges, price tags, gradients and aurora, custom canvas effects |
-| Scene `camera`, `rotateX`/`rotateY` | Camera push-ins and drifts, 3D device tilts |
+| 📱 **Live app screens** | Real HTML/CSS interfaces inside iPhone, Android, tablet, browser and laptop frames, with taps, typing, counting numbers, state changes and scrolling, all in time with the video. |
+| 🖼️ **Generated imagery** | Product shots, lifestyle scenes and backgrounds written as photography briefs and generated on the fly. Or use your own photos. |
+| ✨ **Motion design** | 25 entrances, 15 exits, 10 loops, 15 transitions, camera moves, 3D tilt, and gradient, aurora and grain backgrounds. |
+| 🎆 **Effects** | Confetti, sparkles, bokeh, light rays, speed lines, light leaks, glow orbs, shockwaves and more. |
+| 🎵 **Sound** | 7 music tracks and 14 sound effects, original and CC0. Claude cuts the ad to the beat and places the sound effects on the cuts. |
+| 🔍 **Polish pass** | Claude reviews a contact sheet of rendered frames and fixes cut-off text, collisions and weak shots before you see the result. |
 
-Reference ads in `server/prompts/examples/` show Claude the quality bar. They're copied into each project before generation.
+## The studio
 
-### Image generation
+![The MotionForge editor: Claude chat on the left, a phone app scene in the preview, settings on the right and a timeline with scene, music and effect tracks](docs/media/studio-editor.png)
+
+- **Simple mode**: one prompt box with format (9:16, 1:1, 4:5, 16:9), length and style. Attach an image and either feature it **in the scene** or **rebuild it as animation**.
+- **Editor mode**: Claude chat, media and audio library on the left, live preview in the center, an inspector on the right, and a timeline with scene, music, effects and voice tracks.
+  - Drag scenes to reorder them, trim or extend from the clip edges, split at the playhead, and use undo and redo.
+  - Click any element in the preview to edit its text, font, colors, position and animation. Drag it to move it.
+  - Select a scene and choose **Ask Claude** to rework only that scene.
+- **Pro mode** (layers and keyframes) is next on the roadmap.
+
+### Keyboard
+
+| Key | Action | Key | Action |
+|---|---|---|---|
+| `Space` | Play / pause | `S` | Split at playhead |
+| `←` `→` | Step one frame (`⇧` for 1 s) | `⌘D` | Duplicate scene |
+| `⌘Z` / `⇧⌘Z` | Undo / redo | `⌫` | Delete selection |
+
+## Export
+
+720p, 1080p or 4K at 30 or 60 fps, as H.264 MP4 with mixed AAC audio. The preview and the export use the same frame-accurate renderer, so what you see is what you get. Files land in `~/.motionforge/projects/<id>/exports/`, and the dialog can download them or show them in Finder or Explorer.
+
+## Requirements
+
+| Needed for | What |
+|---|---|
+| Everything | [Node.js](https://nodejs.org) 20+ |
+| Generating | [Claude Code](https://code.claude.com), installed and logged in |
+| Exporting | [ffmpeg](https://ffmpeg.org) (with ffprobe) and Google Chrome or another Chromium browser |
+
+Check your setup with `node scripts/doctor.mjs` from the plugin folder.
+
+## Image generation
+
+Choose the source in **Settings**, the sliders icon in the top bar.
 
 | Source | Setup | Notes |
 |---|---|---|
-| Pollinations (default) | None | Free. Without a token: one image every 45 seconds (queued automatically) and a small logo. A free token from enter.pollinations.ai removes both limits. |
-| Hugging Face | Token with Inference permission | FLUX.1 schnell, uses your free monthly credits |
-| Off | — | Claude uses only your photos, UI, shapes and effects |
+| **Pollinations** (default) | Nothing | Free. Without a token: one image every 45 s (queued automatically) and a small logo on images. A free token from [enter.pollinations.ai](https://enter.pollinations.ai) removes both. |
+| **Hugging Face** | Token with Inference permission | FLUX.1 schnell, uses your free monthly credits |
+| **Off** | | Claude uses only your photos, app screens, shapes and effects |
 
-Generated images are cached per prompt in the project's media, and you can regenerate an image from the inspector after editing its prompt.
+Image prompts are sent to the provider you choose. Generated images are cached per prompt, and you can edit a prompt and regenerate from the inspector.
 
 ## How it works
 
+```mermaid
+flowchart LR
+  U([Your prompt]) --> S[Studio in your browser]
+  S -- local API + token --> Srv[Local server · 127.0.0.1]
+  Srv --> C[Claude Code CLI<br/>writes comp.json]
+  C --> V{Validate}
+  V --> I[Image generation]
+  I --> R[Contact sheet<br/>polish pass]
+  R --> S
+  S --> P[Sandboxed preview]
+  Srv --> E[Headless Chrome<br/>frame capture] --> F[ffmpeg] --> M([MP4])
 ```
-Browser studio ──HTTP (token)──▶ local server (127.0.0.1)
-  │                                 ├─ claude -p  (Read/Write/Edit/Glob only, in the project folder)
-  └─ sandboxed stage iframe         └─ export: headless Chrome ─frames─▶ ffmpeg ─▶ MP4
-       (same renderer for preview and export)
-```
 
-- **Composition**: Claude writes `comp.json`, made of scenes, layers (background, text, image, shape, code), enter/exit/loop presets, keyframes, transitions and audio clips. The format is documented in `server/prompts/director.md`, which also carries the craft rules that keep the output looking premium. The server validates the result and, if needed, sends the errors back to Claude once for a repair.
-- **Renderer** (`studio/engine/`): a deterministic DOM renderer where every frame is a pure function of time. Preview and export use the same code, so what you see is what you export.
-- **Isolation**: the stage runs in an `allow-scripts` sandboxed iframe with a CSP that blocks all network access. Code layers that Claude writes can draw on a canvas but can't reach the studio, its token or the network.
-- **Claude CLI**: runs with `--permission-mode acceptEdits`, only the Read/Write/Edit/Glob tools, `--strict-mcp-config` and `--setting-sources project`, so your personal MCP servers, plugins and hooks aren't loaded into generation runs. Each project keeps its Claude session, so follow-up prompts have context.
-- **Export**: headless Chrome via the DevTools protocol (Node's built-in WebSocket, no npm dependencies) captures PNG frames. ffmpeg encodes H.264 (CRF 15, BT.709) and mixes the audio tracks with fades and a limiter.
-- **Polish pass**: after generating, the server renders a contact sheet of key frames (`review/contact-sheet.jpg`). Claude looks at it and fixes cut-off text, collisions, empty frames and weak shots.
-- **History**: a snapshot of the composition is saved before every generation (`history/`), and the editor has full undo/redo.
+- **Composition**: Claude writes `comp.json`, made of scenes, layers (background, text, image, shape, ui, effect, cursor, code), animations, camera moves and audio clips. The format and the art-direction rules live in [`server/prompts/director.md`](server/prompts/director.md), with reference ads in [`server/prompts/examples/`](server/prompts/examples).
+- **Renderer**: [`studio/engine/`](studio/engine) is deterministic. Every frame is a pure function of time, which makes scrubbing exact and exports frame-perfect.
+- **Isolation**: generated screens and effect code run in a sandboxed iframe with a CSP that blocks all network access. The CLI runs with only Read/Write/Edit/Glob in the project folder, with no MCP servers, plugins or hooks.
+- **No dependencies**: Chrome is driven through the DevTools protocol using Node's built-in WebSocket. The UI is Preact + htm, vendored, with no build step.
 
-The server binds to `127.0.0.1` only, requires a random bearer token from the launch URL, checks the `Origin` header, and never runs a shell.
-
-### Environment variables
+<details>
+<summary><b>Environment variables</b></summary>
 
 | Variable | Purpose |
 |---|---|
@@ -92,26 +125,35 @@ The server binds to `127.0.0.1` only, requires a random bearer token from the la
 | `MOTIONFORGE_MODEL` | Model passed to `claude --model` |
 | `MOTIONFORGE_CHROME`, `MOTIONFORGE_FFMPEG`, `MOTIONFORGE_FFPROBE` | Binary overrides |
 
-## Assets and licenses
+</details>
 
-- **Music and sound effects** (`assets/audio/`) are original: synthesized by `scripts/make-audio.mjs` and dedicated to the public domain under CC0. Regenerate them with `node scripts/make-audio.mjs`.
-- **Fonts** (`assets/fonts/`) are SIL Open Font License families (Inter, Montserrat, Playfair Display, Space Grotesk, Oswald, Syne, DM Sans, Bebas Neue, Anton, Archivo Black, DM Serif Display, Instrument Serif, Poppins, JetBrains Mono).
-- **UI library**: Preact + htm (MIT), vendored in `studio/vendor/`.
+<details>
+<summary><b>Security</b></summary>
 
-## Usage terms
+The server listens on `127.0.0.1` only, requires a random bearer token from the launch link, checks the `Origin` header, and never runs a shell. Don't expose it through a proxy. Project data stays in `~/.motionforge/`.
 
-Generation uses each user's own Claude Code setup and is subject to their plan's limits and Anthropic's terms. MotionForge doesn't provide or resell Claude access.
+</details>
 
-## License
+## Roadmap
 
-MIT, see [LICENSE](LICENSE). Bundled fonts (SIL OFL), audio (CC0) and the Preact/htm bundle keep their own licenses, noted in their folders.
+- [ ] Pro mode: layer and keyframe editor
+- [ ] Background removal for uploaded product photos
+- [ ] Windows and Linux testing
+- [ ] Faster export
 
 ## Development
 
 ```bash
-npm test                 # schema, timeline and edit-operation tests
-node scripts/doctor.mjs  # check requirements
-node scripts/launch.mjs  # start or reuse the server; restarts it when the version changes
+npm test                     # schema, timeline and edit tests
+node scripts/doctor.mjs      # check requirements
+node scripts/launch.mjs      # start or reuse the local server (--no-open to skip the browser)
+node scripts/make-audio.mjs  # regenerate the bundled music and sound effects
 ```
 
-Server logs: `~/.motionforge/server.log`.
+Server logs: `~/.motionforge/server.log`. To try the plugin from a local folder: `claude --plugin-dir /path/to/motionforge`.
+
+## License
+
+[MIT](LICENSE) © younann. Bundled fonts are SIL Open Font License, the music and sound effects are CC0 (generated by `scripts/make-audio.mjs`), and the UI bundle is Preact (MIT) + htm (Apache 2.0). See the license notes in each folder.
+
+Generation uses each user's own Claude Code setup and is subject to their plan's limits and Anthropic's terms. MotionForge doesn't provide or resell Claude access.
