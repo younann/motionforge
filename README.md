@@ -6,7 +6,9 @@
 
 Describe your product or drop in a photo. MotionForge writes the story, generates the imagery, builds live app screens, scores it with music and sound effects, and hands you a timeline to finish it.
 
-<!-- DEMO: replace this comment with the demo video made with /brag -->
+<a href="docs/media/demo.mp4"><img src="docs/media/demo-poster.jpg" alt="Watch the 22-second MotionForge demo: from one sentence to a finished product ad" width="880"></a>
+
+<sub>Click to watch. The demo itself was made and exported with MotionForge.</sub>
 
 <br>
 
