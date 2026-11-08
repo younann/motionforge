@@ -1,0 +1,19 @@
+{
+  "name": "motionforge",
+  "version": "0.3.0",
+  "description": "Animated ad studio: describe a video or drop in an image, Claude designs the motion, music and sound effects, then edit on a timeline and export MP4.",
+  "author": {
+    "name": "younann",
+    "url": "https://github.com/younann"
+  },
+  "license": "MIT",
+  "keywords": [
+    "video",
+    "animation",
+    "motion-graphics",
+    "ads",
+    "timeline"
+  ],
+  "homepage": "https://github.com/younann/motionforge",
+  "repository": "https://github.com/younann/motionforge"
+}

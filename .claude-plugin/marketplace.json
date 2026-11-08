@@ -1,0 +1,15 @@
+{
+  "name": "motionforge-marketplace",
+  "description": "MotionForge plugin marketplace",
+  "owner": {
+    "name": "younann",
+    "url": "https://github.com/younann"
+  },
+  "plugins": [
+    {
+      "name": "motionforge",
+      "source": "./",
+      "description": "Animated ad studio with a timeline editor, powered by your Claude Code CLI"
+    }
+  ]
+}

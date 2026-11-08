@@ -1,0 +1,16 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Stage</title>
+<link rel="stylesheet" href="/fonts.css">
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:transparent}
+#wrap{position:absolute;left:0;top:0;transform-origin:0 0}
+#stage{box-shadow:0 0 0 1px rgba(255,255,255,.04)}
+.mf-layer{transform-origin:50% 50%;will-change:transform,opacity}
+body.edit .mf-layer:not(.mf-background){cursor:grab}
+body.edit .mf-layer.dragging{cursor:grabbing}
+#sel{position:absolute;pointer-events:none;border:2px solid #8b7bff;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.4);display:none;z-index:9999}
+#sel i{position:absolute;width:10px;height:10px;background:#fff;border:2px solid #8b7bff;border-radius:2px}
+</style></head>
+<body><div id="wrap"><div id="stage"></div></div><div id="sel"><i style="left:-6px;top:-6px"></i><i style="right:-6px;top:-6px"></i><i style="left:-6px;bottom:-6px"></i><i style="right:-6px;bottom:-6px"></i></div>
+<script type="module" src="/engine/stage.js"></script>
+</body></html>

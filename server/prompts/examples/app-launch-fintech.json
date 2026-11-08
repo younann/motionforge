@@ -1,0 +1,1391 @@
+{
+ "title": "Penny: banking, but instant",
+ "width": 1080,
+ "height": 1920,
+ "fps": 30,
+ "background": "#07080F",
+ "style": {
+  "palette": [
+   "#07080F",
+   "#7C5CFF",
+   "#C6FF4D",
+   "#F4F3FF"
+  ],
+  "fonts": [
+   "Space Grotesk",
+   "Inter"
+  ]
+ },
+ "scenes": [
+  {
+   "id": "s1",
+   "name": "Hook: floating phone",
+   "duration": 3.5,
+   "notes": "Bold two-line claim revealed with lines-rise while the phone flies up from below in a 3D tilt that settles; two floating UI cards pop around it so the frame reads as a real product from 0.5 s.",
+   "layers": [
+    {
+     "id": "s1-bg",
+     "type": "background",
+     "fill": "#07080F",
+     "gradient": {
+      "type": "radial",
+      "stops": [
+       [
+        "#2A1C78",
+        0
+       ],
+       [
+        "#0B2A44",
+        0.5
+       ],
+       [
+        "#170D3A",
+        1
+       ]
+      ]
+     },
+     "animate": "aurora",
+     "grain": 0.35,
+     "vignette": 0.55
+    },
+    {
+     "id": "s1-orbs",
+     "type": "effect",
+     "effect": "glow-orbs",
+     "colors": [
+      "#7C5CFF",
+      "#C6FF4D",
+      "#3EC6FF"
+     ],
+     "density": 1.2,
+     "speed": 0.8,
+     "opacity": 0.55,
+     "blend": "screen"
+    },
+    {
+     "id": "s1-glow",
+     "type": "shape",
+     "shape": "circle",
+     "x": 540,
+     "y": 1240,
+     "width": 760,
+     "height": 760,
+     "fill": "#7C5CFF",
+     "blur": 140,
+     "opacity": 0.6,
+     "blend": "screen",
+     "loop": {
+      "preset": "breathe",
+      "speed": 0.8
+     }
+    },
+    {
+     "id": "s1-kicker",
+     "type": "text",
+     "text": "NEW  ·  PENNY 2.0",
+     "x": 540,
+     "y": 250,
+     "font": "Inter",
+     "weight": 700,
+     "size": 30,
+     "letterSpacing": 0.24,
+     "color": "#C6FF4D",
+     "background": "rgba(198,255,77,0.12)",
+     "padding": 26,
+     "radius": 40,
+     "enter": {
+      "preset": "fade",
+      "duration": 0.5
+     }
+    },
+    {
+     "id": "s1-headline",
+     "type": "text",
+     "text": "Banking,\nbut instant.",
+     "x": 540,
+     "y": 440,
+     "font": "Space Grotesk",
+     "weight": 700,
+     "size": 132,
+     "lineHeight": 0.98,
+     "letterSpacing": -0.035,
+     "color": "#F4F3FF",
+     "highlightWords": [
+      "instant."
+     ],
+     "highlight": "#C6FF4D",
+     "enter": {
+      "preset": "lines-rise",
+      "duration": 0.8,
+      "stagger": 0.12,
+      "delay": 0.1,
+      "ease": "easeOutExpo"
+     }
+    },
+    {
+     "id": "s1-phone",
+     "type": "ui",
+     "device": "iphone",
+     "x": 540,
+     "y": 1270,
+     "width": 500,
+     "viewport": {
+      "width": 390,
+      "height": 844
+     },
+     "screen": "#0B0C15",
+     "shadow": "0 60px 90px rgba(0,0,0,0.55)",
+     "keyframes": {
+      "y": [
+       [
+        0,
+        1760
+       ],
+       [
+        1.0,
+        1270,
+        "easeOutExpo"
+       ]
+      ],
+      "rotateY": [
+       [
+        0,
+        -30
+       ],
+       [
+        3.5,
+        -9,
+        "easeOutCubic"
+       ]
+      ],
+      "rotateX": [
+       [
+        0,
+        14
+       ],
+       [
+        3.5,
+        5,
+        "easeOutCubic"
+       ]
+      ]
+     },
+     "html": [
+      "<div class='a'><div class='sb'><span>9:41</span><span><u></u><i></i></span></div><div class='hd'><div class='av'>AR</div><div class='hi'>",
+      "<small>Good morning</small><b>Alex Rivera</b></div><div class='bl'></div></div><div class='bal'><small>Total balance</small><h1>$12,480<em>.52</em></h1>",
+      "<span class='up'>&#9650; 3.2% this month</span></div><div class='acts'><div class='r' data-at='0.7'><i>+</i>Add</div><div class='r' data-at='0.78'>",
+      "<i>&#8599;</i>Send</div><div class='r' data-at='0.86'><i>&#8601;</i>Request</div><div class='r' data-at='0.94'><i>&#8943;</i>More</div></div>",
+      "<div class='vc r' data-at='1.0'><b>penny</b><em>VIRTUAL</em><span>&#8226;&#8226;&#8226;&#8226; 4821</span></div><div class='sec'><span>Today</span>",
+      "<small>See all</small></div><div class='tx r' data-at='1.15'><i style='background:#FF8A65'>CC</i><p><b>Corner Caf&eacute;</b>",
+      "<small>Food &amp; drink &middot; 8:12</small></p><em>&minus;$6.40</em></div><div class='tx r' data-at='1.25'><i style='background:#C6FF4D'>MC</i><p>",
+      "<b>Maya Chen</b><small>Transfer &middot; 7:45</small></p><em class='p'>+$240.00</em></div><div class='tx r' data-at='1.35'><i style='background:#3EC6FF'>MT</i>",
+      "<p><b>Metro Transit</b><small>Travel &middot; 7:30</small></p><em>&minus;$2.90</em></div><div class='tx r' data-at='1.45'><i style='background:#B9A8FF'>SL</i>",
+      "<p><b>Salary</b><small>Income &middot; Mon</small></p><em class='p'>+$4,200.00</em></div><div class='tb'><i></i><i></i><i></i><i></i></div><div class='hm'>",
+      "</div></div>"
+     ],
+     "css": [
+      ".a{position:relative;height:100%;background:#0B0C15;color:#F4F3FF;font-family:Inter;padding:60px 20px 0}",
+      ".sb{position:absolute;top:18px;left:34px;right:26px;display:flex;justify-content:space-between;align-items:center;font:600 16px Inter;color:#fff}",
+      ".sb i{display:inline-block;width:25px;height:12px;border:1.5px solid rgba(255,255,255,.9);border-radius:4px;position:relative}",
+      ".sb i:after{content:'';position:absolute;left:1.5px;top:1.5px;bottom:1.5px;width:15px;background:#fff;border-radius:2px}",
+      ".sb u{display:inline-block;width:17px;height:11px;margin-right:6px;background:#fff;clip-path:polygon(0 100%,100% 0,100% 100%)}",
+      ".r{opacity:var(--k);transform:translateY(calc((1 - var(--k))*16px))}.hd{display:flex;align-items:center;gap:12px;margin:6px 0 22px}",
+      ".av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#C6FF4D,#7C5CFF);display:grid;place-items:center;font:700 13px Inter;color:#0B0C15}",
+      ".hi{flex:1}.hi small{display:block;font-size:12px;color:#8E8CA8}.hi b{font-size:16px}",
+      ".bl{width:38px;height:38px;border-radius:12px;background:#171827;position:relative}",
+      ".bl:after{content:'';position:absolute;right:9px;top:9px;width:8px;height:8px;border-radius:50%;background:#C6FF4D}.bal small{font-size:13px;color:#8E8CA8}",
+      ".bal h1{font:700 46px 'Space Grotesk';letter-spacing:-.02em;margin:4px 0 8px}.bal h1 em{font-style:normal;color:#6F6C8E}",
+      ".up{display:inline-block;font:600 12px Inter;color:#C6FF4D;background:rgba(198,255,77,.12);padding:5px 10px;border-radius:20px}",
+      ".acts{display:flex;justify-content:space-between;margin:22px 0}.acts div{width:76px;text-align:center;font-size:12px;color:#B8B6D3}",
+      ".acts i{display:grid;place-items:center;width:56px;height:56px;margin:0 auto 6px;border-radius:18px;background:#171827;font:600 22px Inter;font-style:normal;color:#fff}",
+      ".acts div:nth-child(2) i{background:#7C5CFF}",
+      ".vc{height:96px;border-radius:20px;padding:16px 18px;background:linear-gradient(120deg,#7C5CFF,#3A2BB8 60%,#1B1650);position:relative;overflow:hidden}",
+      ".vc b{font:700 20px 'Space Grotesk';color:#fff}.vc span{position:absolute;left:18px;bottom:14px;font:500 14px Inter;letter-spacing:.12em}",
+      ".vc em{position:absolute;right:16px;top:20px;font:700 10px Inter;font-style:normal;letter-spacing:.2em;color:#C6FF4D}",
+      ".vc:after{content:'';position:absolute;right:-30px;bottom:-70px;width:160px;height:160px;border-radius:50%;background:rgba(198,255,77,.22)}",
+      ".sec{font:600 15px Inter;margin:22px 0 6px;display:flex;justify-content:space-between;align-items:center}.sec small{font-size:12px;color:#7C5CFF}",
+      ".tx{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #1A1B2A}",
+      ".tx i{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font:700 12px Inter;font-style:normal;color:#0B0C15}.tx p{flex:1;margin:0}",
+      ".tx b{display:block;font-size:15px;font-weight:600}.tx small{font-size:12px;color:#7D7B97}.tx em{font:600 15px Inter;font-style:normal}.tx .p{color:#C6FF4D}",
+      ".tb{position:absolute;left:0;right:0;bottom:0;height:80px;background:#0E0F1A;border-top:1px solid #1A1B2A;display:flex;justify-content:space-around;padding-top:14px}",
+      ".tb i{width:24px;height:24px;border-radius:8px;background:#2A2B40}.tb i:first-child{background:#C6FF4D}",
+      ".hm{position:absolute;bottom:8px;left:50%;width:134px;height:5px;margin-left:-67px;border-radius:3px;background:#fff}"
+     ]
+    },
+    {
+     "id": "s1-card-received",
+     "type": "ui",
+     "device": "none",
+     "x": 270,
+     "y": 1590,
+     "width": 380,
+     "rotate": -5,
+     "viewport": {
+      "width": 300,
+      "height": 76
+     },
+     "screen": "#161726",
+     "shadow": "0 24px 50px rgba(0,0,0,0.5)",
+     "start": 1.2,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.55,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.8
+     },
+     "html": [
+      "<div class='n'><i>&#8601;</i><p><b>+$240.00</b><small>Maya sent you money</small></p><em>now</em></div>"
+     ],
+     "css": [
+      ".n{display:flex;align-items:center;gap:12px;height:100%;padding:0 16px;color:#fff;font-family:Inter;border:1px solid rgba(255,255,255,.08);border-radius:18px}",
+      ".n i{width:42px;height:42px;border-radius:12px;background:#C6FF4D;color:#0B0C15;display:grid;place-items:center;font:700 20px Inter;font-style:normal}",
+      ".n p{flex:1;margin:0}.n b{display:block;font:700 18px 'Space Grotesk'}.n small{font-size:12px;color:#9C9AB8}",
+      ".n em{font-style:normal;font-size:11px;color:#6F6C8E}"
+     ]
+    },
+    {
+     "id": "s1-card-spend",
+     "type": "ui",
+     "device": "none",
+     "x": 810,
+     "y": 975,
+     "width": 340,
+     "rotate": 4,
+     "viewport": {
+      "width": 260,
+      "height": 96
+     },
+     "screen": "#F4F3FF",
+     "shadow": "0 24px 50px rgba(0,0,0,0.45)",
+     "start": 1.5,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.55,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.7,
+      "speed": 1.2
+     },
+     "html": [
+      "<div class='n'><p><small>Spending this week</small><b>&#9660; 18%</b></p><div class='bars'><i style='height:60%'></i><i style='height:80%'></i>",
+      "<i style='height:45%'></i><i style='height:70%'></i><i style='height:35%'></i><i class='on' style='height:28%'></i></div></div>"
+     ],
+     "css": [
+      ".n{display:flex;align-items:center;justify-content:space-between;height:100%;padding:0 18px;font-family:Inter;color:#0B0C15}.n p{margin:0}",
+      ".n small{display:block;font-size:12px;color:#6F6C8E;margin-bottom:4px}.n b{font:700 26px 'Space Grotesk';color:#5B3DF5}",
+      ".bars{display:flex;align-items:flex-end;gap:5px;height:52px}.bars i{width:9px;border-radius:4px;background:#D9D4FF}.bars .on{background:#7C5CFF}"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Balance in real time",
+   "duration": 3.5,
+   "transition": {
+    "type": "zoom",
+    "duration": 0.5,
+    "ease": "easeInOutCubic"
+   },
+   "camera": {
+    "zoom": [
+     [
+      0,
+      1
+     ],
+     [
+      3.5,
+      1.07,
+      "easeInOutSine"
+     ]
+    ],
+    "y": [
+     [
+      0,
+      0
+     ],
+     [
+      3.5,
+      30,
+      "easeInOutSine"
+     ]
+    ]
+   },
+   "notes": "Insights screen comes alive: the balance counts up with data-count, the SVG line chart draws via stroke-dashoffset on --k, the budget ring fills with a conic-gradient and category bars grow; a slow camera push keeps it filmed.",
+   "layers": [
+    {
+     "id": "s2-bg",
+     "type": "background",
+     "fill": "#07080F",
+     "gradient": {
+      "type": "linear",
+      "angle": 170,
+      "stops": [
+       [
+        "#120C2E",
+        0
+       ],
+       [
+        "#07080F",
+        1
+       ]
+      ]
+     },
+     "grain": 0.35,
+     "vignette": 0.5
+    },
+    {
+     "id": "s2-waves",
+     "type": "effect",
+     "effect": "waves",
+     "y": 1300,
+     "height": 1300,
+     "colors": [
+      "#7C5CFF",
+      "#3EC6FF",
+      "#C6FF4D"
+     ],
+     "density": 1.4,
+     "speed": 0.8,
+     "opacity": 0.7,
+     "blend": "screen"
+    },
+    {
+     "id": "s2-headline",
+     "type": "text",
+     "text": "Every cent.\nIn real time.",
+     "x": 540,
+     "y": 380,
+     "font": "Space Grotesk",
+     "weight": 700,
+     "size": 124,
+     "lineHeight": 0.98,
+     "letterSpacing": -0.035,
+     "color": "#F4F3FF",
+     "highlightWords": [
+      "real",
+      "time."
+     ],
+     "highlight": "#C6FF4D",
+     "enter": {
+      "preset": "lines-rise",
+      "duration": 0.7,
+      "stagger": 0.1,
+      "delay": 0.2
+     }
+    },
+    {
+     "id": "s2-phone",
+     "type": "ui",
+     "device": "iphone",
+     "x": 540,
+     "y": 1250,
+     "width": 520,
+     "viewport": {
+      "width": 390,
+      "height": 844
+     },
+     "screen": "#0B0C15",
+     "shadow": "0 60px 90px rgba(0,0,0,0.55)",
+     "keyframes": {
+      "rotateY": [
+       [
+        0,
+        16
+       ],
+       [
+        3.5,
+        6,
+        "easeOutCubic"
+       ]
+      ],
+      "rotateX": [
+       [
+        0,
+        6
+       ],
+       [
+        3.5,
+        2
+       ]
+      ]
+     },
+     "enter": {
+      "preset": "rise",
+      "duration": 0.8,
+      "distance": 2
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.6
+     },
+     "html": [
+      "<div class='a'><div class='sb'><span>9:41</span><span><u></u><i></i></span></div><div class='nv'><b>Insights</b><span>June &#9662;</span></div><div class='bx'>",
+      "<small>Total balance</small><h1 data-count='12480.52' data-decimals='2' data-prefix='$' data-at='0.3' data-dur='1.8'>$0.00</h1>",
+      "<span class='up r' data-at='1.7'>+$1,204.30 this month</span><svg class='ch' data-at='0.5' data-dur='1.6' viewBox='0 0 318 110'><defs>",
+      "<linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#C6FF4D' stop-opacity='.35'/>",
+      "<stop offset='1' stop-color='#C6FF4D' stop-opacity='0'/></linearGradient></defs>",
+      "<path class='ar' d='M0 92 C36 86 52 64 86 68 S136 38 172 48 S226 20 262 26 S300 8 318 6 L318 110 L0 110Z' fill='url(#g)'/>",
+      "<path class='ln' pathLength='1' d='M0 92 C36 86 52 64 86 68 S136 38 172 48 S226 20 262 26 S300 8 318 6' fill='none' stroke='#C6FF4D' stroke-width='3' stroke-linecap='round'/>",
+      "</svg></div><div class='sec'><span>Monthly budget</span><small>$2,400</small></div><div class='bd'><div class='ring' data-at='0.8' data-dur='1.3'><div>",
+      "<b>72%</b><small>used</small></div></div><div class='cats'><div class='ct' data-at='1.0' data-dur='0.9'><p><span>Groceries</span><b>$620</b></p><u>",
+      "<i style='background:#C6FF4D'></i></u></div><div class='ct' data-at='1.12' data-dur='0.9'><p><span>Dining</span><b>$410</b></p><u>",
+      "<i style='background:#7C5CFF;max-width:62%'></i></u></div><div class='ct' data-at='1.24' data-dur='0.9'><p><span>Transport</span><b>$180</b></p><u>",
+      "<i style='background:#3EC6FF;max-width:34%'></i></u></div></div></div><div class='up2 r' data-at='1.5'><i>&#10003;</i><p><b>Rent auto-paid</b>",
+      "<small>Jul 1 &middot; Landlord Co.</small></p><em>$1,450</em></div></div>"
+     ],
+     "css": [
+      ".a{position:relative;height:100%;background:#0B0C15;color:#F4F3FF;font-family:Inter;padding:60px 20px 0}",
+      ".sb{position:absolute;top:18px;left:34px;right:26px;display:flex;justify-content:space-between;align-items:center;font:600 16px Inter;color:#fff}",
+      ".sb i{display:inline-block;width:25px;height:12px;border:1.5px solid rgba(255,255,255,.9);border-radius:4px;position:relative}",
+      ".sb i:after{content:'';position:absolute;left:1.5px;top:1.5px;bottom:1.5px;width:15px;background:#fff;border-radius:2px}",
+      ".sb u{display:inline-block;width:17px;height:11px;margin-right:6px;background:#fff;clip-path:polygon(0 100%,100% 0,100% 100%)}",
+      ".r{opacity:var(--k);transform:translateY(calc((1 - var(--k))*14px))}",
+      ".nv{display:flex;justify-content:space-between;align-items:center;margin:6px 0 18px;font:700 26px 'Space Grotesk'}",
+      ".nv span{font:500 13px Inter;color:#B8B6D3;background:#171827;padding:7px 12px;border-radius:20px}",
+      ".bx{background:#131424;border:1px solid #1E1F33;border-radius:22px;padding:18px 16px 8px}.bx small{font-size:13px;color:#8E8CA8}",
+      ".bx h1{font:700 44px 'Space Grotesk';letter-spacing:-.02em;margin:4px 0 8px}",
+      ".up{display:inline-block;font:600 12px Inter;color:#C6FF4D;background:rgba(198,255,77,.12);padding:5px 10px;border-radius:20px}",
+      ".ch{display:block;width:100%;height:110px;margin-top:10px}.ln{stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--k))}.ar{opacity:var(--k)}",
+      ".sec{font:600 15px Inter;margin:22px 0 12px;display:flex;justify-content:space-between}.sec small{font-size:13px;color:#8E8CA8}",
+      ".bd{display:flex;gap:18px;align-items:center}",
+      ".ring{width:122px;height:122px;border-radius:50%;flex:none;display:grid;place-items:center;background:conic-gradient(#C6FF4D 0,#7C5CFF calc(var(--k)*72%),#20213A 0)}",
+      ".ring div{width:94px;height:94px;border-radius:50%;background:#0B0C15;display:grid;place-content:center;text-align:center}.ring b{font:700 26px 'Space Grotesk'}",
+      ".ring small{font-size:11px;color:#8E8CA8}.cats{flex:1}.ct{margin:7px 0}",
+      ".ct p{display:flex;justify-content:space-between;margin:0 0 6px;font-size:13px;color:#B8B6D3}.ct b{color:#fff}",
+      ".ct u{display:block;height:8px;border-radius:4px;background:#1C1D30;overflow:hidden}.ct i{display:block;height:100%;width:calc(var(--k)*82%);border-radius:4px}",
+      ".up2{display:flex;align-items:center;gap:12px;margin-top:22px;background:#131424;border:1px solid #1E1F33;border-radius:18px;padding:12px 14px}",
+      ".up2 i{width:38px;height:38px;border-radius:50%;background:rgba(198,255,77,.15);color:#C6FF4D;display:grid;place-items:center;font-style:normal;font-weight:700}",
+      ".up2 p{flex:1;margin:0}.up2 b{display:block;font-size:14px}.up2 small{font-size:12px;color:#7D7B97}.up2 em{font:700 15px Inter;font-style:normal}"
+     ]
+    },
+    {
+     "id": "s2-card-vault",
+     "type": "ui",
+     "device": "none",
+     "x": 260,
+     "y": 1650,
+     "width": 360,
+     "rotate": -4,
+     "viewport": {
+      "width": 260,
+      "height": 100
+     },
+     "screen": "#F4F3FF",
+     "shadow": "0 24px 50px rgba(0,0,0,0.5)",
+     "start": 1.3,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.55,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.8
+     },
+     "html": [
+      "<div class='n'><small>Savings vault &middot; 4.6% APY</small><b data-count='3240' data-prefix='$' data-at='0.2' data-dur='1.2'>$0</b><u><i></i></u></div>"
+     ],
+     "css": [
+      ".n{height:100%;padding:16px 18px;font-family:Inter;color:#0B0C15}.n small{display:block;font-size:12px;color:#6F6C8E}",
+      ".n b{display:block;font:700 30px 'Space Grotesk';margin:2px 0 8px;color:#0B0C15}.n u{display:block;height:7px;border-radius:4px;background:#E4E0FF}",
+      ".n i{display:block;height:100%;width:64%;border-radius:4px;background:linear-gradient(90deg,#7C5CFF,#C6FF4D)}"
+     ]
+    },
+    {
+     "id": "s2-card-alert",
+     "type": "ui",
+     "device": "none",
+     "x": 820,
+     "y": 860,
+     "width": 340,
+     "rotate": 5,
+     "viewport": {
+      "width": 240,
+      "height": 72
+     },
+     "screen": "#161726",
+     "shadow": "0 24px 50px rgba(0,0,0,0.5)",
+     "start": 1.8,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.5,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.6,
+      "speed": 1.3
+     },
+     "html": [
+      "<div class='n'><i>!</i><p><b>Under budget</b><small>$240 left for dining</small></p></div>"
+     ],
+     "css": [
+      ".n{display:flex;align-items:center;gap:12px;height:100%;padding:0 14px;color:#fff;font-family:Inter;border:1px solid rgba(255,255,255,.08);border-radius:16px}",
+      ".n i{width:38px;height:38px;border-radius:50%;background:#7C5CFF;display:grid;place-items:center;font:800 18px Inter;font-style:normal}.n p{margin:0}",
+      ".n b{display:block;font-size:15px}.n small{font-size:12px;color:#9C9AB8}"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Send in two taps",
+   "duration": 4,
+   "transition": {
+    "type": "push-left",
+    "duration": 0.5,
+    "ease": "easeInOutQuart"
+   },
+   "notes": "Full product moment: the amount types out while matching keypad keys flash (data-at with data-until), a touch cursor taps Send, the button flips state via [data-on] and a lime success screen wipes open with clip-path; an iOS-style notification drops in to confirm.",
+   "layers": [
+    {
+     "id": "s3-bg",
+     "type": "background",
+     "fill": "#07080F",
+     "gradient": {
+      "type": "radial",
+      "stops": [
+       [
+        "#1F1460",
+        0
+       ],
+       [
+        "#0A1F33",
+        0.6
+       ],
+       [
+        "#07080F",
+        1
+       ]
+      ]
+     },
+     "animate": "aurora",
+     "grain": 0.35,
+     "vignette": 0.55
+    },
+    {
+     "id": "s3-glow",
+     "type": "shape",
+     "shape": "circle",
+     "x": 540,
+     "y": 1300,
+     "width": 720,
+     "height": 720,
+     "fill": "#C6FF4D",
+     "blur": 160,
+     "opacity": 0,
+     "blend": "screen",
+     "keyframes": {
+      "opacity": [
+       [
+        1.9,
+        0
+       ],
+       [
+        2.4,
+        0.4,
+        "easeOutCubic"
+       ],
+       [
+        4,
+        0.25
+       ]
+      ]
+     }
+    },
+    {
+     "id": "s3-headline",
+     "type": "text",
+     "text": "Pay anyone\nin two taps.",
+     "x": 540,
+     "y": 340,
+     "font": "Space Grotesk",
+     "weight": 700,
+     "size": 124,
+     "lineHeight": 0.98,
+     "letterSpacing": -0.035,
+     "color": "#F4F3FF",
+     "highlightWords": [
+      "two",
+      "taps."
+     ],
+     "highlight": "#C6FF4D",
+     "enter": {
+      "preset": "lines-rise",
+      "duration": 0.7,
+      "stagger": 0.1,
+      "delay": 0.15
+     }
+    },
+    {
+     "id": "s3-phone",
+     "type": "ui",
+     "device": "iphone",
+     "x": 540,
+     "y": 1180,
+     "width": 520,
+     "viewport": {
+      "width": 390,
+      "height": 844
+     },
+     "screen": "#0B0C15",
+     "shadow": "0 60px 90px rgba(0,0,0,0.55)",
+     "keyframes": {
+      "y": [
+       [
+        0,
+        1260
+       ],
+       [
+        0.8,
+        1180,
+        "easeOutExpo"
+       ]
+      ],
+      "rotateY": [
+       [
+        0,
+        -14
+       ],
+       [
+        1.3,
+        0,
+        "easeOutCubic"
+       ]
+      ]
+     },
+     "html": [
+      "<div class='a'><div class='sb'><span>9:41</span><span><u></u><i></i></span></div><div class='nv'><span>&#8592;</span><b>Send money</b><span>&#8943;</span></div>",
+      "<div class='to'><i>MC</i><p><b>Maya Chen</b><small>@mayachen &middot; on Penny</small></p><em>Instant</em></div><div class='amt'><small>Amount</small>",
+      "<h2>$<span data-type='1' data-at='0.6' data-cps='8'>85.00</span></h2><div class='nt'>Dinner split &middot; 3 people</div></div><div class='kp'><b>1</b><b>2</b>",
+      "<b>3</b><b>4</b><b data-at='0.72' data-dur='0.1' data-until='0.85'>5</b><b>6</b><b>7</b><b data-at='0.6' data-dur='0.1' data-until='0.72'>8</b><b>9</b>",
+      "<b data-at='0.85' data-dur='0.1' data-until='0.97'>.</b><b data-at='0.97' data-dur='0.1' data-until='1.2'>0</b><b>&#9003;</b></div>",
+      "<div class='go' data-at='1.88' data-dur='0.15'><span>Send $85.00</span></div><div class='ok' data-at='2.0' data-dur='0.6' data-ease='easeInOutCubic'>",
+      "<div class='ck' data-at='2.3' data-dur='0.5' data-ease='easeOutBack'><svg viewBox='0 0 24 24' width='56' height='56'>",
+      "<path d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='#C6FF4D' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg></div>",
+      "<h3 class='rz' data-at='2.45'>Sent!</h3><p class='rz' data-at='2.55'>$85.00 to Maya Chen</p>",
+      "<span class='rz pill' data-at='2.65'>Arrived in 1.4 s &middot; $0 fees</span></div><div class='hm'></div></div>"
+     ],
+     "css": [
+      ".a{position:relative;height:100%;background:#0B0C15;color:#F4F3FF;font-family:Inter;padding:60px 20px 0}",
+      ".sb{position:absolute;top:18px;left:34px;right:26px;display:flex;justify-content:space-between;align-items:center;font:600 16px Inter;color:#fff;z-index:2}",
+      ".sb i{display:inline-block;width:25px;height:12px;border:1.5px solid currentColor;border-radius:4px;position:relative}",
+      ".sb i:after{content:'';position:absolute;left:1.5px;top:1.5px;bottom:1.5px;width:15px;background:currentColor;border-radius:2px}",
+      ".sb u{display:inline-block;width:17px;height:11px;margin-right:6px;background:currentColor;clip-path:polygon(0 100%,100% 0,100% 100%)}",
+      ".nv{display:flex;justify-content:space-between;align-items:center;margin:4px 0 18px;font:700 18px Inter}",
+      ".nv span{width:36px;height:36px;border-radius:12px;background:#171827;display:grid;place-items:center;font-size:16px}",
+      ".to{display:flex;align-items:center;gap:12px;background:#151626;border:1px solid #1E1F33;border-radius:18px;padding:12px 14px}",
+      ".to i{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#FF8A65,#FF4F8B);display:grid;place-items:center;font:700 15px Inter;font-style:normal;color:#fff}",
+      ".to p{flex:1;margin:0}.to b{display:block;font-size:16px}.to small{font-size:12px;color:#8E8CA8}",
+      ".to em{font:600 11px Inter;font-style:normal;color:#C6FF4D;background:rgba(198,255,77,.12);padding:5px 9px;border-radius:12px}",
+      ".amt{text-align:center;margin:30px 0 0}.amt small{font-size:13px;color:#8E8CA8}",
+      ".amt h2{font:700 76px 'Space Grotesk';letter-spacing:-.03em;margin:4px 0 10px;min-height:84px}",
+      ".nt{display:inline-block;font-size:13px;background:#171827;padding:7px 14px;border-radius:20px;color:#CFCDE6}",
+      ".kp{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:22px}",
+      ".kp b{height:58px;display:grid;place-items:center;font:500 26px Inter;border-radius:16px;background:rgba(255,255,255,calc(.03 + var(--k,0)*.22));transform:scale(calc(1 - var(--k,0)*.06))}",
+      ".go{position:absolute;left:20px;right:20px;bottom:44px;height:58px;border-radius:18px;background:#7C5CFF;display:grid;place-items:center;font:700 17px Inter;color:#fff;transform:scale(calc(1 - var(--k)*.04))}",
+      ".go[data-on]{background:#C6FF4D;color:#0B0C15}",
+      ".ok{position:absolute;inset:0;background:#C6FF4D;color:#0B0C15;clip-path:circle(calc(var(--k)*140%) at 50% 91%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-bottom:40px}",
+      ".ck{width:108px;height:108px;border-radius:50%;background:#0B0C15;display:grid;place-items:center;transform:scale(calc(.3 + var(--k)*.7));opacity:var(--k)}",
+      ".ok h3{font:700 48px 'Space Grotesk';margin:24px 0 4px;letter-spacing:-.02em}.ok p{margin:0 0 16px;font:600 17px Inter}",
+      ".pill{font:600 13px Inter;background:rgba(11,12,21,.1);padding:8px 14px;border-radius:20px}.rz{opacity:var(--k);transform:translateY(calc((1 - var(--k))*14px))}",
+      ".hm{position:absolute;bottom:8px;left:50%;width:134px;height:5px;margin-left:-67px;border-radius:3px;background:#fff}"
+     ]
+    },
+    {
+     "id": "s3-touch",
+     "type": "cursor",
+     "style": "touch",
+     "size": 110,
+     "color": "#FFFFFF",
+     "start": 0.9,
+     "end": 2.6,
+     "x": 540,
+     "y": 1614,
+     "enter": {
+      "preset": "fade",
+      "duration": 0.2
+     },
+     "exit": {
+      "preset": "fade",
+      "duration": 0.2
+     },
+     "keyframes": {
+      "x": [
+       [
+        0.9,
+        860
+       ],
+       [
+        1.6,
+        540,
+        "easeOutCubic"
+       ],
+       [
+        2.6,
+        760,
+        "easeInOutCubic"
+       ]
+      ],
+      "y": [
+       [
+        0.9,
+        1860
+       ],
+       [
+        1.6,
+        1614,
+        "easeOutCubic"
+       ],
+       [
+        2.6,
+        1860,
+        "easeInOutCubic"
+       ]
+      ]
+     },
+     "taps": [
+      1.85
+     ]
+    },
+    {
+     "id": "s3-notification",
+     "type": "ui",
+     "device": "none",
+     "x": 540,
+     "y": 770,
+     "width": 500,
+     "viewport": {
+      "width": 360,
+      "height": 76
+     },
+     "screen": "#1C1D2B",
+     "shadow": "0 24px 50px rgba(0,0,0,0.5)",
+     "start": 2.75,
+     "enter": {
+      "preset": "drop",
+      "duration": 0.55,
+      "ease": "easeOutBack"
+     },
+     "html": [
+      "<div class='n'><i>p</i><p><b>Penny</b><small>Maya received your $85.00</small></p><em>now</em></div>"
+     ],
+     "css": [
+      ".n{display:flex;align-items:center;gap:12px;height:100%;padding:0 14px;color:#fff;font-family:Inter;border:1px solid rgba(255,255,255,.1);border-radius:20px}",
+      ".n i{width:42px;height:42px;border-radius:12px;background:#7C5CFF;color:#C6FF4D;display:grid;place-items:center;font:700 24px 'Space Grotesk';font-style:normal}",
+      ".n p{flex:1;margin:0}.n b{display:block;font-size:15px}.n small{font-size:13px;color:#B8B6D3}",
+      ".n em{font-style:normal;font-size:12px;color:#8E8CA8;align-self:flex-start;margin-top:16px}"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Stat: zero fees",
+   "duration": 2.5,
+   "transition": {
+    "type": "zoom-out",
+    "duration": 0.5,
+    "ease": "easeInOutCubic"
+   },
+   "camera": {
+    "zoom": [
+     [
+      0,
+      1.06
+     ],
+     [
+      2.5,
+      1,
+      "easeOutCubic"
+     ]
+    ]
+   },
+   "notes": "Proof beat: a 3D card swings in with rotateY while a giant gradient $0 lands with a shockwave; a stats strip counts up with data-count so the number feels earned.",
+   "layers": [
+    {
+     "id": "s4-bg",
+     "type": "background",
+     "fill": "#07080F",
+     "gradient": {
+      "type": "radial",
+      "stops": [
+       [
+        "#2B1C7A",
+        0
+       ],
+       [
+        "#07080F",
+        0.75
+       ]
+      ]
+     },
+     "animate": "pulse",
+     "grain": 0.4,
+     "vignette": 0.5
+    },
+    {
+     "id": "s4-orbs",
+     "type": "effect",
+     "effect": "glow-orbs",
+     "colors": [
+      "#7C5CFF",
+      "#C6FF4D"
+     ],
+     "density": 0.8,
+     "opacity": 0.4,
+     "blend": "screen"
+    },
+    {
+     "id": "s4-card",
+     "type": "ui",
+     "device": "none",
+     "x": 540,
+     "y": 560,
+     "width": 620,
+     "viewport": {
+      "width": 340,
+      "height": 214
+     },
+     "screen": "#3A2BB8",
+     "shadow": "0 40px 70px rgba(0,0,0,0.6)",
+     "keyframes": {
+      "rotateY": [
+       [
+        0,
+        -55
+       ],
+       [
+        1.1,
+        12,
+        "easeOutCubic"
+       ],
+       [
+        2.5,
+        -6,
+        "easeInOutSine"
+       ]
+      ],
+      "rotateX": [
+       [
+        0,
+        20
+       ],
+       [
+        1.1,
+        8,
+        "easeOutCubic"
+       ]
+      ],
+      "y": [
+       [
+        0,
+        640
+       ],
+       [
+        1.0,
+        560,
+        "easeOutExpo"
+       ]
+      ]
+     },
+     "enter": {
+      "preset": "fade",
+      "duration": 0.3
+     },
+     "html": [
+      "<div class='c'><b>penny</b><em>DEBIT</em><div class='chip'></div>",
+      "<span>&#8226;&#8226;&#8226;&#8226; &nbsp;&#8226;&#8226;&#8226;&#8226; &nbsp;&#8226;&#8226;&#8226;&#8226; &nbsp;4821</span><small>ALEX RIVERA</small><i></i>",
+      "</div>"
+     ],
+     "css": [
+      ".c{position:relative;height:100%;padding:22px 24px;color:#fff;font-family:Inter;background:linear-gradient(125deg,#8C6CFF 0%,#4B33D6 45%,#17123F 100%);overflow:hidden}",
+      ".c:before{content:'';position:absolute;right:-60px;top:-80px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(198,255,77,.55),transparent 65%)}",
+      ".c:after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent calc(var(--p)*160% - 40%),rgba(255,255,255,.28) calc(var(--p)*160% - 25%),transparent calc(var(--p)*160% - 10%))}",
+      ".c b{position:relative;font:700 28px 'Space Grotesk'}",
+      ".c em{position:absolute;right:24px;top:30px;font:700 11px Inter;font-style:normal;letter-spacing:.24em;color:#C6FF4D}",
+      ".chip{width:46px;height:34px;border-radius:7px;margin-top:22px;background:linear-gradient(135deg,#F4E3A8,#C9A75A)}",
+      ".c span{position:absolute;left:24px;bottom:46px;font:500 17px Inter;letter-spacing:.08em}",
+      ".c small{position:absolute;left:24px;bottom:20px;font:600 11px Inter;letter-spacing:.2em;color:rgba(255,255,255,.7)}",
+      ".c i{position:absolute;right:24px;bottom:20px;width:40px;height:40px;border-radius:50%;border:3px solid rgba(255,255,255,.6)}"
+     ]
+    },
+    {
+     "id": "s4-shock",
+     "type": "effect",
+     "effect": "shockwave",
+     "x": 540,
+     "y": 1090,
+     "width": 1080,
+     "height": 1080,
+     "colors": [
+      "#C6FF4D",
+      "#FFFFFF"
+     ],
+     "start": 0.55,
+     "opacity": 0.8,
+     "blend": "screen"
+    },
+    {
+     "id": "s4-zero",
+     "type": "text",
+     "text": "$0",
+     "x": 540,
+     "y": 1090,
+     "font": "Space Grotesk",
+     "weight": 700,
+     "size": 420,
+     "lineHeight": 0.9,
+     "letterSpacing": -0.05,
+     "gradient": {
+      "type": "linear",
+      "angle": 180,
+      "stops": [
+       [
+        "#FFFFFF",
+        0
+       ],
+       [
+        "#C6FF4D",
+        1
+       ]
+      ]
+     },
+     "start": 0.45,
+     "enter": {
+      "preset": "zoom-out",
+      "duration": 0.6,
+      "ease": "easeOutExpo"
+     }
+    },
+    {
+     "id": "s4-sub",
+     "type": "text",
+     "text": "fees. Not now, not ever.",
+     "x": 540,
+     "y": 1330,
+     "font": "Inter",
+     "weight": 600,
+     "size": 60,
+     "letterSpacing": -0.01,
+     "color": "#F4F3FF",
+     "start": 0.7,
+     "enter": {
+      "preset": "words-rise",
+      "duration": 0.5,
+      "stagger": 0.06
+     }
+    },
+    {
+     "id": "s4-stats",
+     "type": "ui",
+     "device": "none",
+     "x": 540,
+     "y": 1540,
+     "width": 880,
+     "viewport": {
+      "width": 440,
+      "height": 96
+     },
+     "screen": "#13142A",
+     "shadow": "0 24px 50px rgba(0,0,0,0.45)",
+     "start": 0.9,
+     "enter": {
+      "preset": "rise",
+      "duration": 0.6
+     },
+     "html": [
+      "<div class='s'><div><b data-count='2.4' data-decimals='1' data-suffix='M' data-at='0.1' data-dur='1.1'>0</b><small>people switched</small></div><div>",
+      "<b data-count='160' data-suffix='+' data-at='0.2' data-dur='1.1'>0</b><small>countries</small></div><div><b>",
+      "<span data-count='4.9' data-decimals='1' data-at='0.3' data-dur='1.1'>0</span> <em>&#9733;</em></b><small>app rating</small></div></div>"
+     ],
+     "css": [
+      ".s{display:flex;height:100%;align-items:center;font-family:Inter;color:#fff;border:1px solid rgba(255,255,255,.08);border-radius:26px}",
+      ".s div{flex:1;text-align:center;border-left:1px solid #26274A}.s div:first-child{border:0}",
+      ".s b{display:block;font:700 34px 'Space Grotesk';letter-spacing:-.02em}.s em{font-style:normal;color:#C6FF4D;font-size:26px}",
+      ".s small{font-size:12px;color:#9C9AB8;letter-spacing:.04em}"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "CTA",
+   "duration": 3.5,
+   "transition": {
+    "type": "circle",
+    "duration": 0.5,
+    "ease": "easeInOutCubic"
+   },
+   "notes": "Brand close: app icon pops with a shockwave, wordmark and promise cascade in, a store-style download button pulses, and the phone peeks from the bottom in a soft 3D tilt; everything lands by 1.3 s so the CTA holds for 2 s.",
+   "layers": [
+    {
+     "id": "s5-bg",
+     "type": "background",
+     "fill": "#07080F",
+     "gradient": {
+      "type": "radial",
+      "stops": [
+       [
+        "#3A24A8",
+        0
+       ],
+       [
+        "#0B2A44",
+        0.5
+       ],
+       [
+        "#170D3A",
+        1
+       ]
+      ]
+     },
+     "animate": "aurora",
+     "grain": 0.35,
+     "vignette": 0.55
+    },
+    {
+     "id": "s5-orbs",
+     "type": "effect",
+     "effect": "glow-orbs",
+     "colors": [
+      "#7C5CFF",
+      "#C6FF4D",
+      "#3EC6FF"
+     ],
+     "density": 1,
+     "opacity": 0.5,
+     "blend": "screen"
+    },
+    {
+     "id": "s5-shock",
+     "type": "effect",
+     "effect": "shockwave",
+     "x": 540,
+     "y": 520,
+     "width": 1000,
+     "height": 1000,
+     "colors": [
+      "#C6FF4D",
+      "#B9A8FF"
+     ],
+     "start": 0.15,
+     "opacity": 0.75,
+     "blend": "screen"
+    },
+    {
+     "id": "s5-icon",
+     "type": "shape",
+     "shape": "rect",
+     "x": 540,
+     "y": 520,
+     "width": 230,
+     "height": 230,
+     "radius": 58,
+     "gradient": {
+      "type": "linear",
+      "angle": 135,
+      "stops": [
+       [
+        "#8C6CFF",
+        0
+       ],
+       [
+        "#3A2BB8",
+        1
+       ]
+      ]
+     },
+     "glow": "rgba(124,92,255,0.7)",
+     "shadow": "0 30px 60px rgba(0,0,0,0.5)",
+     "start": 0.1,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.6,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.5
+     }
+    },
+    {
+     "id": "s5-icon-mark",
+     "type": "text",
+     "text": "p",
+     "x": 540,
+     "y": 505,
+     "width": 230,
+     "font": "Space Grotesk",
+     "weight": 700,
+     "size": 190,
+     "lineHeight": 1,
+     "color": "#C6FF4D",
+     "start": 0.1,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.6,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.5
+     }
+    },
+    {
+     "id": "s5-wordmark",
+     "type": "text",
+     "text": "penny",
+     "x": 540,
+     "y": 790,
+     "font": "Space Grotesk",
+     "weight": 700,
+     "size": 150,
+     "letterSpacing": -0.04,
+     "color": "#F4F3FF",
+     "start": 0.35,
+     "enter": {
+      "preset": "chars-rise",
+      "duration": 0.6,
+      "stagger": 0.04
+     }
+    },
+    {
+     "id": "s5-tagline",
+     "type": "text",
+     "text": "Your money, at the speed of you.",
+     "x": 540,
+     "y": 905,
+     "font": "Inter",
+     "weight": 500,
+     "size": 46,
+     "color": "#C9C6E8",
+     "start": 0.6,
+     "enter": {
+      "preset": "blur",
+      "duration": 0.6
+     }
+    },
+    {
+     "id": "s5-btn",
+     "type": "shape",
+     "shape": "pill",
+     "x": 540,
+     "y": 1080,
+     "width": 640,
+     "height": 136,
+     "fill": "#F4F3FF",
+     "glow": "rgba(198,255,77,0.45)",
+     "start": 0.85,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.5,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "pulse",
+      "amount": 0.5,
+      "speed": 1
+     }
+    },
+    {
+     "id": "s5-btn-glyph",
+     "type": "text",
+     "text": "↓",
+     "x": 300,
+     "y": 1078,
+     "width": 80,
+     "font": "Inter",
+     "weight": 700,
+     "size": 64,
+     "color": "#07080F",
+     "start": 0.95,
+     "enter": {
+      "preset": "drop",
+      "duration": 0.5,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s5-btn-small",
+     "type": "text",
+     "text": "DOWNLOAD FREE ON",
+     "x": 600,
+     "y": 1050,
+     "width": 420,
+     "align": "left",
+     "font": "Inter",
+     "weight": 700,
+     "size": 22,
+     "letterSpacing": 0.18,
+     "color": "#4B4870",
+     "start": 0.95,
+     "enter": {
+      "preset": "fade",
+      "duration": 0.4
+     }
+    },
+    {
+     "id": "s5-btn-big",
+     "type": "text",
+     "text": "iPhone & Android",
+     "x": 600,
+     "y": 1095,
+     "width": 420,
+     "align": "left",
+     "font": "Space Grotesk",
+     "weight": 700,
+     "size": 46,
+     "letterSpacing": -0.02,
+     "color": "#07080F",
+     "start": 1.0,
+     "enter": {
+      "preset": "fade",
+      "duration": 0.4
+     }
+    },
+    {
+     "id": "s5-rating",
+     "type": "text",
+     "text": "★★★★★  4.9 · 120K reviews",
+     "x": 540,
+     "y": 1225,
+     "font": "Inter",
+     "weight": 600,
+     "size": 34,
+     "color": "#C6FF4D",
+     "highlightWords": [
+      "4.9",
+      "·",
+      "120K",
+      "reviews"
+     ],
+     "highlight": "#C9C6E8",
+     "start": 1.15,
+     "enter": {
+      "preset": "rise",
+      "duration": 0.5
+     }
+    },
+    {
+     "id": "s5-phone",
+     "type": "ui",
+     "device": "iphone",
+     "x": 540,
+     "y": 1900,
+     "width": 560,
+     "viewport": {
+      "width": 390,
+      "height": 844
+     },
+     "screen": "#0B0C15",
+     "shadow": "0 -30px 80px rgba(124,92,255,0.45)",
+     "keyframes": {
+      "y": [
+       [
+        0,
+        2200
+       ],
+       [
+        1.1,
+        1900,
+        "easeOutExpo"
+       ]
+      ],
+      "rotateX": [
+       [
+        0,
+        30
+       ],
+       [
+        3.5,
+        16,
+        "easeOutCubic"
+       ]
+      ]
+     },
+     "html": [
+      "<div class='a'><div class='sb'><span>9:41</span><span><u></u><i></i></span></div><div class='hd'><div class='av'>AR</div><div class='hi'>",
+      "<small>Good morning</small><b>Alex Rivera</b></div><div class='bl'></div></div><div class='bal'><small>Total balance</small><h1>$12,480<em>.52</em></h1>",
+      "<span class='up'>&#9650; 3.2% this month</span></div><div class='acts'><div><i>+</i>Add</div><div><i>&#8599;</i>Send</div><div><i>&#8601;</i>Request</div><div>",
+      "<i>&#8943;</i>More</div></div></div>"
+     ],
+     "css": [
+      ".a{position:relative;height:100%;background:#0B0C15;color:#F4F3FF;font-family:Inter;padding:60px 20px 0}",
+      ".sb{position:absolute;top:18px;left:34px;right:26px;display:flex;justify-content:space-between;align-items:center;font:600 16px Inter;color:#fff}",
+      ".sb i{display:inline-block;width:25px;height:12px;border:1.5px solid rgba(255,255,255,.9);border-radius:4px;position:relative}",
+      ".sb i:after{content:'';position:absolute;left:1.5px;top:1.5px;bottom:1.5px;width:15px;background:#fff;border-radius:2px}",
+      ".sb u{display:inline-block;width:17px;height:11px;margin-right:6px;background:#fff;clip-path:polygon(0 100%,100% 0,100% 100%)}",
+      ".hd{display:flex;align-items:center;gap:12px;margin:6px 0 22px}",
+      ".av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#C6FF4D,#7C5CFF);display:grid;place-items:center;font:700 13px Inter;color:#0B0C15}",
+      ".hi{flex:1}.hi small{display:block;font-size:12px;color:#8E8CA8}.hi b{font-size:16px}.bl{width:38px;height:38px;border-radius:12px;background:#171827}",
+      ".bal small{font-size:13px;color:#8E8CA8}.bal h1{font:700 46px 'Space Grotesk';letter-spacing:-.02em;margin:4px 0 8px}.bal h1 em{font-style:normal;color:#6F6C8E}",
+      ".up{display:inline-block;font:600 12px Inter;color:#C6FF4D;background:rgba(198,255,77,.12);padding:5px 10px;border-radius:20px}",
+      ".acts{display:flex;justify-content:space-between;margin:22px 0}.acts div{width:76px;text-align:center;font-size:12px;color:#B8B6D3}",
+      ".acts i{display:grid;place-items:center;width:56px;height:56px;margin:0 auto 6px;border-radius:18px;background:#171827;font:600 22px Inter;font-style:normal;color:#fff}",
+      ".acts div:nth-child(2) i{background:#7C5CFF}"
+     ]
+    }
+   ]
+  }
+ ],
+ "audio": [
+  {
+   "kind": "music",
+   "src": "lib:music/tech",
+   "start": 0,
+   "volume": 0.7,
+   "fadeIn": 0,
+   "fadeOut": 1.2
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/whoosh",
+   "start": 2.8,
+   "volume": 0.55
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/whoosh",
+   "start": 5.8,
+   "volume": 0.55
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/typing",
+   "start": 6.6,
+   "volume": 0.45,
+   "duration": 0.6
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/click",
+   "start": 7.85,
+   "volume": 0.7
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/ding",
+   "start": 8.05,
+   "volume": 0.6
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/hit",
+   "start": 9.95,
+   "volume": 0.7
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/shimmer",
+   "start": 11.6,
+   "volume": 0.5
+  }
+ ]
+}

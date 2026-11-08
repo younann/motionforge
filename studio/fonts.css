@@ -1,0 +1,18 @@
+/* Bundled fonts, SIL Open Font License 1.1 */
+@font-face{font-family:'Inter';src:url('/fonts/inter.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:block}
+@font-face{font-family:'Inter';src:url('/fonts/inter-italic.woff2') format('woff2');font-weight:100 900;font-style:italic;font-display:block}
+@font-face{font-family:'Montserrat';src:url('/fonts/montserrat.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:block}
+@font-face{font-family:'Playfair Display';src:url('/fonts/playfair-display.woff2') format('woff2');font-weight:400 900;font-style:normal;font-display:block}
+@font-face{font-family:'Space Grotesk';src:url('/fonts/space-grotesk.woff2') format('woff2');font-weight:300 700;font-style:normal;font-display:block}
+@font-face{font-family:'Oswald';src:url('/fonts/oswald.woff2') format('woff2');font-weight:200 700;font-style:normal;font-display:block}
+@font-face{font-family:'Syne';src:url('/fonts/syne.woff2') format('woff2');font-weight:400 800;font-style:normal;font-display:block}
+@font-face{font-family:'DM Sans';src:url('/fonts/dm-sans.woff2') format('woff2');font-weight:100 1000;font-style:normal;font-display:block}
+@font-face{font-family:'Bebas Neue';src:url('/fonts/bebas-neue-400.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:block}
+@font-face{font-family:'Anton';src:url('/fonts/anton-400.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:block}
+@font-face{font-family:'Archivo Black';src:url('/fonts/archivo-black-400.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:block}
+@font-face{font-family:'DM Serif Display';src:url('/fonts/dm-serif-display-400.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:block}
+@font-face{font-family:'Instrument Serif';src:url('/fonts/instrument-serif-400.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:block}
+@font-face{font-family:'Poppins';src:url('/fonts/poppins-400.woff2') format('woff2');font-weight:100 499;font-style:normal;font-display:block}
+@font-face{font-family:'Poppins';src:url('/fonts/poppins-600.woff2') format('woff2');font-weight:500 699;font-style:normal;font-display:block}
+@font-face{font-family:'Poppins';src:url('/fonts/poppins-800.woff2') format('woff2');font-weight:700 900;font-style:normal;font-display:block}
+@font-face{font-family:'JetBrains Mono';src:url('/fonts/jetbrains-mono-500.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:block}

@@ -1,0 +1,8 @@
+preact-htm.js bundles Preact and htm.
+
+Preact: MIT License, Copyright (c) 2015-present Jason Miller
+htm: Apache License 2.0, Copyright 2018 Google Inc.
+
+Full license texts:
+https://github.com/preactjs/preact/blob/main/LICENSE
+https://github.com/developit/htm/blob/master/LICENSE

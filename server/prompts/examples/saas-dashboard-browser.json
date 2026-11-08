@@ -1,0 +1,1401 @@
+{
+ "title": "Pulseboard: stop guessing",
+ "width": 1920,
+ "height": 1080,
+ "fps": 30,
+ "background": "#0A0B12",
+ "style": {
+  "palette": [
+   "#0A0B12",
+   "#5B8CFF",
+   "#2EE6A6",
+   "#F5F7FF"
+  ],
+  "fonts": [
+   "Syne",
+   "Inter"
+  ]
+ },
+ "scenes": [
+  {
+   "id": "s1",
+   "name": "Hook",
+   "duration": 3.0,
+   "camera": {
+    "zoom": [
+     [
+      0,
+      1.08
+     ],
+     [
+      3,
+      1,
+      "easeOutCubic"
+     ]
+    ]
+   },
+   "notes": "Headline on the left, three live KPI cards floating in 3D on the right (rotateY keyframes, float loops, staggered pops); the revenue card counts up and its sparkline draws so the hook already shows the product working.",
+   "layers": [
+    {
+     "id": "s1-bg",
+     "type": "background",
+     "fill": "#0A0B12",
+     "gradient": {
+      "type": "radial",
+      "stops": [
+       [
+        "#1B2A6B",
+        0
+       ],
+       [
+        "#0E1A3A",
+        0.5
+       ],
+       [
+        "#0A0B12",
+        1
+       ]
+      ]
+     },
+     "animate": "aurora",
+     "grain": 0.3,
+     "vignette": 0.5
+    },
+    {
+     "id": "s1-grid",
+     "type": "effect",
+     "effect": "grid",
+     "y": 820,
+     "height": 520,
+     "colors": [
+      "#5B8CFF",
+      "#2EE6A6"
+     ],
+     "density": 0.8,
+     "speed": 0.6,
+     "opacity": 0.35,
+     "blend": "screen"
+    },
+    {
+     "id": "s1-orbs",
+     "type": "effect",
+     "effect": "glow-orbs",
+     "colors": [
+      "#5B8CFF",
+      "#2EE6A6",
+      "#9B7BFF"
+     ],
+     "density": 1,
+     "opacity": 0.45,
+     "blend": "screen"
+    },
+    {
+     "id": "s1-kicker",
+     "type": "text",
+     "text": "PULSEBOARD 3.0  ·  LIVE ANALYTICS",
+     "x": 575,
+     "y": 320,
+     "font": "Inter",
+     "weight": 700,
+     "size": 22,
+     "width": 910,
+     "align": "left",
+     "letterSpacing": 0.24,
+     "color": "#2EE6A6",
+     "enter": {
+      "preset": "fade",
+      "duration": 0.5
+     }
+    },
+    {
+     "id": "s1-headline",
+     "type": "text",
+     "text": "Stop guessing.\nStart knowing.",
+     "x": 575,
+     "y": 480,
+     "font": "Syne",
+     "weight": 700,
+     "size": 92,
+     "lineHeight": 1.02,
+     "letterSpacing": -0.035,
+     "width": 910,
+     "align": "left",
+     "color": "#F5F7FF",
+     "highlightWords": [
+      "knowing."
+     ],
+     "highlight": "#2EE6A6",
+     "enter": {
+      "preset": "lines-rise",
+      "duration": 0.75,
+      "stagger": 0.12
+     }
+    },
+    {
+     "id": "s1-sub",
+     "type": "text",
+     "text": "Every metric from every tool, in one live dashboard.",
+     "x": 575,
+     "y": 660,
+     "font": "Inter",
+     "weight": 500,
+     "size": 32,
+     "width": 910,
+     "align": "left",
+     "color": "#AEB4D0",
+     "start": 0.6,
+     "enter": {
+      "preset": "words-rise",
+      "duration": 0.5,
+      "stagger": 0.04
+     }
+    },
+    {
+     "id": "s1-card-mrr",
+     "type": "ui",
+     "device": "none",
+     "x": 1390,
+     "y": 380,
+     "width": 560,
+     "viewport": {
+      "width": 340,
+      "height": 190
+     },
+     "screen": "#FFFFFF",
+     "shadow": "0 40px 80px rgba(0,0,0,0.5)",
+     "keyframes": {
+      "rotateY": [
+       [
+        0,
+        -32
+       ],
+       [
+        3,
+        -14,
+        "easeOutCubic"
+       ]
+      ],
+      "rotateX": [
+       [
+        0.2,
+        10
+       ],
+       [
+        3,
+        4
+       ]
+      ]
+     },
+     "enter": {
+      "preset": "pop",
+      "duration": 0.6,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.7
+     },
+     "html": [
+      "<div class='c'><small>Monthly recurring revenue</small><b data-count='284120' data-prefix='$' data-at='0.3' data-dur='1.6'>$0</b>",
+      "<em>&#9650; 12.4% vs last month</em>",
+      "<svg data-at='0.5' data-dur='1.4' viewBox='0 0 300 60' style='position:absolute;left:20px;right:20px;bottom:14px;width:300px;height:60px'>",
+      "<path pathLength='1' class='l' d='M0 52 C30 48 50 40 80 42 S130 22 160 28 S220 10 250 14 S285 4 300 2' fill='none' stroke='#5B8CFF' stroke-width='3.5' stroke-linecap='round'/>",
+      "</svg></div>"
+     ],
+     "css": [
+      ".c{height:100%;padding:18px 20px;font-family:Inter;color:#0F1222;position:relative;overflow:hidden}.c small{font-size:13px;color:#6B7089}",
+      ".c b{display:block;font:700 34px 'Syne';letter-spacing:-.02em;margin:4px 0}",
+      ".c em{font:600 12px Inter;font-style:normal;color:#12B886;background:#E6FBF3;padding:4px 8px;border-radius:8px}",
+      ".l{stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--k))}"
+     ]
+    },
+    {
+     "id": "s1-card-conv",
+     "type": "ui",
+     "device": "none",
+     "x": 1180,
+     "y": 800,
+     "width": 330,
+     "viewport": {
+      "width": 200,
+      "height": 200
+     },
+     "screen": "#FFFFFF",
+     "shadow": "0 40px 80px rgba(0,0,0,0.5)",
+     "start": 0.3,
+     "keyframes": {
+      "rotateY": [
+       [
+        0.3,
+        -26
+       ],
+       [
+        3,
+        -10,
+        "easeOutCubic"
+       ]
+      ]
+     },
+     "enter": {
+      "preset": "pop",
+      "duration": 0.6,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.6,
+      "speed": 1.2
+     },
+     "html": [
+      "<div class='c' style='text-align:center'><small>Trial conversion</small><div class='ring' data-at='0.2' data-dur='1.2'><div>",
+      "<b data-count='4.82' data-decimals='2' data-suffix='%' data-at='0.2' data-dur='1.2'>0</b></div></div></div>"
+     ],
+     "css": [
+      ".c{height:100%;padding:18px 20px;font-family:Inter;color:#0F1222;position:relative;overflow:hidden}.c small{font-size:13px;color:#6B7089}",
+      ".c b{display:block;font:700 34px 'Syne';letter-spacing:-.02em;margin:4px 0}",
+      ".c em{font:600 12px Inter;font-style:normal;color:#12B886;background:#E6FBF3;padding:4px 8px;border-radius:8px}",
+      ".ring{width:132px;height:132px;margin:12px auto 0;border-radius:50%;background:conic-gradient(#2EE6A6 calc(var(--k)*68%),#EEF0F5 0);display:grid;place-items:center}",
+      ".ring div{width:104px;height:104px;border-radius:50%;background:#fff;display:grid;place-items:center}.ring b{font-size:26px}"
+     ]
+    },
+    {
+     "id": "s1-card-alert",
+     "type": "ui",
+     "device": "none",
+     "x": 1600,
+     "y": 800,
+     "width": 440,
+     "viewport": {
+      "width": 280,
+      "height": 84
+     },
+     "screen": "#0F1222",
+     "shadow": "0 30px 60px rgba(0,0,0,0.5)",
+     "start": 0.5,
+     "keyframes": {
+      "rotateY": [
+       [
+        0.5,
+        -20
+       ],
+       [
+        3,
+        -8,
+        "easeOutCubic"
+       ]
+      ]
+     },
+     "enter": {
+      "preset": "pop",
+      "duration": 0.55,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.5,
+      "speed": 0.9
+     },
+     "html": [
+      "<div class='n'><i>&#8600;</i><p><b>Churn down 12%</b><small>Onboarding fix is working</small></p></div>"
+     ],
+     "css": [
+      ".n{display:flex;align-items:center;gap:12px;height:100%;padding:0 16px;font-family:Inter;color:#fff;border:1px solid rgba(255,255,255,.1);border-radius:16px}",
+      ".n i{width:40px;height:40px;border-radius:12px;background:#2EE6A6;color:#0F1222;display:grid;place-items:center;font:800 18px Inter;font-style:normal}",
+      ".n p{margin:0}.n b{display:block;font-size:16px}.n small{font-size:12px;color:#9EA3BD}"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Dashboard comes alive",
+   "duration": 4.5,
+   "transition": {
+    "type": "slide-up",
+    "duration": 0.5,
+    "ease": "easeInOutQuart"
+   },
+   "camera": {
+    "zoom": [
+     [
+      0,
+      1
+     ],
+     [
+      1.2,
+      1,
+      "easeInOutCubic"
+     ],
+     [
+      4.5,
+      1.14,
+      "easeInOutCubic"
+     ]
+    ],
+    "x": [
+     [
+      1.2,
+      0
+     ],
+     [
+      4.5,
+      -150,
+      "easeInOutCubic"
+     ]
+    ],
+    "y": [
+     [
+      1.2,
+      0
+     ],
+     [
+      4.5,
+      -30,
+      "easeInOutCubic"
+     ]
+    ]
+   },
+   "notes": "Real dashboard in a browser frame: KPI cards rise and count with data-count, twelve CSS bars grow with --k and easeOutBack in a 50 ms cascade, channel bars fill and deal rows slide in; the camera then pushes in toward the KPIs so the numbers read.",
+   "layers": [
+    {
+     "id": "s2-bg",
+     "type": "background",
+     "fill": "#0A0B12",
+     "gradient": {
+      "type": "linear",
+      "angle": 180,
+      "stops": [
+       [
+        "#121A3C",
+        0
+       ],
+       [
+        "#0A0B12",
+        1
+       ]
+      ]
+     },
+     "grain": 0.3,
+     "vignette": 0.4
+    },
+    {
+     "id": "s2-waves",
+     "type": "effect",
+     "effect": "waves",
+     "y": 700,
+     "height": 900,
+     "colors": [
+      "#5B8CFF",
+      "#2EE6A6",
+      "#9B7BFF"
+     ],
+     "density": 1.2,
+     "speed": 0.7,
+     "opacity": 0.6,
+     "blend": "screen"
+    },
+    {
+     "id": "s2-headline",
+     "type": "text",
+     "text": "Every metric. One live view.",
+     "x": 960,
+     "y": 108,
+     "font": "Syne",
+     "weight": 700,
+     "size": 64,
+     "letterSpacing": -0.02,
+     "width": 1600,
+     "color": "#F5F7FF",
+     "highlightWords": [
+      "live",
+      "view."
+     ],
+     "highlight": "#2EE6A6",
+     "enter": {
+      "preset": "words-rise",
+      "duration": 0.55,
+      "stagger": 0.07
+     }
+    },
+    {
+     "type": "ui",
+     "device": "browser",
+     "x": 960,
+     "y": 640,
+     "width": 1440,
+     "viewport": {
+      "width": 1280,
+      "height": 720
+     },
+     "screen": "#F4F6FB",
+     "url": "app.pulseboard.io/overview",
+     "shadow": "0 50px 100px rgba(0,0,0,0.55)",
+     "id": "s2-browser",
+     "enter": {
+      "preset": "rise",
+      "duration": 0.8,
+      "distance": 3
+     },
+     "keyframes": {
+      "rotateX": [
+       [
+        0,
+        14
+       ],
+       [
+        1.0,
+        0,
+        "easeOutCubic"
+       ]
+      ]
+     },
+     "html": [
+      "<div class='d'><aside><div class='lg'><i></i>Pulseboard</div><nav><a class='on'><i></i>Overview</a><a><i></i>Revenue</a><a><i></i>Customers</a><a><i>",
+      "</i>Funnels</a><a><i></i>Reports</a><a><i></i>Alerts<em>3</em></a></nav><div class='ws'><b>A</b><p>Acme Studio<small>Growth plan</small></p></div></aside>",
+      "<div class='main'><div class='mc' data-scroll='1'><header><div><h1>Overview</h1><small>Live &middot; updated 2 min ago</small></div><div class='hr'>",
+      "<div class='avs'><i style='background:#FFB547'></i><i style='background:#9B7BFF'></i><i style='background:#2EE6A6'></i></div>",
+      "<span class='pill'>Last 12 months &#9662;</span><span class='btn'>Share</span></div></header><div class='kpis'><div class='k card r' data-at='0.3'>",
+      "<small>Monthly recurring revenue</small><b data-count='284120' data-prefix='$' data-at='0.4' data-dur='1.6'>0</b><em>&#9650; 12.4%</em><svg viewBox='0 0 84 34'>",
+      "<path d='M2 28 L14 24 L26 26 L38 16 L50 19 L62 10 L74 12 L82 4' fill='none' stroke='#5B8CFF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/>",
+      "</svg></div><div class='k card r' data-at='0.4'><small>Active users</small><b data-count='48392' data-at='0.5' data-dur='1.6'>0</b><em>&#9650; 8.1%</em>",
+      "<svg viewBox='0 0 84 34'>",
+      "<path d='M2 28 L14 24 L26 26 L38 16 L50 19 L62 10 L74 12 L82 4' fill='none' stroke='#5B8CFF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/>",
+      "</svg></div><div class='k card r' data-at='0.5'><small>Trial conversion</small>",
+      "<b data-count='4.82' data-decimals='2' data-suffix='%' data-at='0.6000000000000001' data-dur='1.6'>0</b><em>&#9650; 0.6 pts</em><svg viewBox='0 0 84 34'>",
+      "<path d='M2 28 L14 24 L26 26 L38 16 L50 19 L62 10 L74 12 L82 4' fill='none' stroke='#12B886' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/>",
+      "</svg></div><div class='k card r' data-at='0.6000000000000001'><small>Net churn</small>",
+      "<b data-count='1.9' data-decimals='1' data-suffix='%' data-at='0.7000000000000001' data-dur='1.6'>0</b><em>&#9660; 0.4 pts</em><svg viewBox='0 0 84 34'>",
+      "<path d='M2 28 L14 24 L26 26 L38 16 L50 19 L62 10 L74 12 L82 4' fill='none' stroke='#12B886' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/>",
+      "</svg></div></div><div class='row'><div class='chart card r' data-at='0.6'><div class='ch'><b>Revenue</b><small>Monthly &middot; USD</small>",
+      "<span class='tg' data-at='99' data-dur='0.2'><i></i>Forecast</span></div><div class='bars'>",
+      "<i style='--h:34%' data-at='0.8' data-dur='0.7' data-ease='easeOutBack'></i>",
+      "<i style='--h:41%' data-at='0.8500000000000001' data-dur='0.7' data-ease='easeOutBack'></i>",
+      "<i style='--h:38%' data-at='0.9' data-dur='0.7' data-ease='easeOutBack'></i>",
+      "<i style='--h:47%' data-at='0.9500000000000001' data-dur='0.7' data-ease='easeOutBack'></i>",
+      "<i style='--h:52%' data-at='1.0' data-dur='0.7' data-ease='easeOutBack'></i><i style='--h:49%' data-at='1.05' data-dur='0.7' data-ease='easeOutBack'></i>",
+      "<i style='--h:58%' data-at='1.1' data-dur='0.7' data-ease='easeOutBack'></i>",
+      "<i style='--h:63%' data-at='1.1500000000000001' data-dur='0.7' data-ease='easeOutBack'></i>",
+      "<i style='--h:61%' data-at='1.2000000000000002' data-dur='0.7' data-ease='easeOutBack'></i>",
+      "<i style='--h:72%' data-at='1.25' data-dur='0.7' data-ease='easeOutBack'></i><i style='--h:80%' data-at='1.3' data-dur='0.7' data-ease='easeOutBack'></i>",
+      "<i style='--h:92%' data-at='1.35' data-dur='0.7' data-ease='easeOutBack'></i><i class='f' style='--h:96%' data-at='99' data-dur='0.5' data-ease='easeOutBack'>",
+      "</i><i class='f' style='--h:100%' data-at='99' data-dur='0.5' data-ease='easeOutBack'></i>",
+      "<i class='f' style='--h:104%' data-at='99' data-dur='0.5' data-ease='easeOutBack'></i></div><div class='mo'><span>Jan</span><span>Feb</span><span>Mar</span>",
+      "<span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span>",
+      "<span>Feb</span><span>Mar</span></div></div><div class='side card r' data-at='0.75'><b>Top channels</b><div class='chn'><div data-at='1.0' data-dur='0.9'><p>",
+      "<span>Organic search</span><b>42%</b></p><u><i style='background:#5B8CFF;--w:84%'></i></u></div><div data-at='1.1' data-dur='0.9'><p><span>Paid social</span>",
+      "<b>23%</b></p><u><i style='background:#9B7BFF;--w:46%'></i></u></div><div data-at='1.2' data-dur='0.9'><p><span>Referral</span><b>18%</b></p><u>",
+      "<i style='background:#2EE6A6;--w:36%'></i></u></div><div data-at='1.3' data-dur='0.9'><p><span>Email</span><b>11%</b></p><u>",
+      "<i style='background:#FFB547;--w:22%'></i></u></div></div></div></div><div class='tbl card'><div class='tr th'><span>Account</span><span>Plan</span>",
+      "<span>Status</span><span>ARR</span></div><div class='tr r' data-at='1.7'><b><i style='background:#5B8CFF'></i>Kitebase</b><span>Enterprise</span>",
+      "<span class='st'>Won</span><span>$48,000</span></div><div class='tr r' data-at='1.79'><b><i style='background:#FFB547'></i>Loomiq</b><span>Growth</span>",
+      "<span class='st'>Won</span><span>$12,600</span></div><div class='tr r' data-at='1.88'><b><i style='background:#9B7BFF'></i>Halcyon Labs</b>",
+      "<span>Enterprise</span><span class='st p'>Pending</span><span>$36,400</span></div><div class='tr r' data-at='1.97'><b><i style='background:#2EE6A6'>",
+      "</i>Fernhill</b><span>Starter</span><span class='st'>Won</span><span>$4,800</span></div><div class='tr r' data-at='2.06'><b><i style='background:#FF5C7A'>",
+      "</i>Stackwise</b><span>Growth</span><span class='st'>Won</span><span>$9,900</span></div></div></div></div></div>"
+     ],
+     "css": [
+      ".d{position:relative;height:100%;background:#F4F6FB;font-family:Inter;color:#0F1222}",
+      "aside{position:absolute;left:0;top:0;bottom:0;width:220px;background:#0F1222;color:#9EA3BD;padding:22px 14px}",
+      ".lg{display:flex;align-items:center;gap:10px;font:700 18px 'Syne';color:#fff;margin:0 6px 28px}",
+      ".lg i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,#5B8CFF,#2EE6A6);transform:rotate(45deg) scale(.8)}",
+      "nav a{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;font:500 14px Inter;margin-bottom:2px}",
+      "nav a i{width:16px;height:16px;border-radius:5px;border:2px solid currentColor;opacity:.7}nav a.on{background:#1E2340;color:#fff}",
+      "nav a em{margin-left:auto;font:700 11px Inter;font-style:normal;background:#FF5C7A;color:#fff;border-radius:10px;padding:2px 7px}",
+      ".ws{position:absolute;left:14px;right:14px;bottom:18px;display:flex;gap:10px;align-items:center;padding:10px;border-radius:12px;background:#161A30}",
+      ".ws b{width:32px;height:32px;border-radius:9px;background:#FFB547;color:#0F1222;display:grid;place-items:center}.ws p{margin:0;font:600 13px Inter;color:#fff}",
+      ".ws small{display:block;font-weight:400;color:#8A8FA8;font-size:11px}.main{position:absolute;left:220px;top:0;right:0;bottom:0;overflow:hidden}",
+      ".mc{padding:24px 28px}header{display:flex;justify-content:space-between;align-items:center;height:44px;margin-bottom:20px}",
+      "header h1{margin:0;font:700 24px 'Syne'}header small{color:#8A8FA8;font-size:12px}.hr{display:flex;gap:10px;align-items:center}",
+      ".pill{font:500 13px Inter;padding:9px 14px;border:1px solid #E1E4EE;border-radius:10px;background:#fff}",
+      ".btn{font:600 13px Inter;padding:10px 16px;border-radius:10px;background:#0F1222;color:#fff}.avs{display:flex}",
+      ".avs i{width:30px;height:30px;border-radius:50%;border:2px solid #F4F6FB;margin-left:-8px}",
+      ".card{background:#fff;border:1px solid #E6E8F0;border-radius:16px;box-shadow:0 1px 2px rgba(15,18,34,.04),0 8px 24px rgba(15,18,34,.04)}",
+      ".r{opacity:var(--k);transform:translateY(calc((1 - var(--k))*18px))}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;height:112px}",
+      ".k{padding:16px 18px;position:relative;overflow:hidden}.k small{font-size:12px;color:#6B7089}",
+      ".k b{display:block;font:700 28px 'Syne';letter-spacing:-.02em;margin:6px 0 4px}.k em{font:600 12px Inter;font-style:normal;color:#12B886}.k em.dn{color:#12B886}",
+      ".k svg{position:absolute;right:14px;bottom:16px;width:84px;height:34px}.row{display:grid;grid-template-columns:1fr 330px;gap:16px;margin-top:20px;height:300px}",
+      ".chart{padding:18px}.ch{display:flex;align-items:center;gap:10px;height:30px}.ch b{font:700 15px Inter}.ch small{color:#8A8FA8;font-size:12px}",
+      ".tg{margin-left:auto;display:flex;align-items:center;gap:8px;width:116px;height:30px;padding:0 10px;border-radius:15px;border:1px solid #E1E4EE;font:600 12px Inter;color:#4A4F68;background:#fff}",
+      ".tg i{width:26px;height:16px;border-radius:8px;background:#D9DCE8;position:relative}",
+      ".tg i:after{content:'';position:absolute;left:2px;top:2px;width:12px;height:12px;border-radius:50%;background:#fff;transform:translateX(calc(var(--k,0)*10px))}",
+      ".tg[data-on]{background:#EEF3FF;border-color:#5B8CFF;color:#3366FF}.tg[data-on] i{background:#5B8CFF}",
+      ".bars{display:flex;align-items:flex-end;gap:10px;height:196px;margin-top:16px;padding-bottom:22px;border-bottom:1px solid #EEF0F5;position:relative;background:repeating-linear-gradient(#fff 0 48px,#F1F3F8 48px 49px)}",
+      ".bars i{flex:1;height:calc(var(--h)*var(--k,0));border-radius:6px 6px 2px 2px;background:linear-gradient(#7FA6FF,#5B8CFF);position:relative}",
+      ".bars i:last-of-type{background:linear-gradient(#5BF0BC,#12B886)}.bars i.f{background:rgba(91,140,255,.1);border:2px dashed #5B8CFF;border-bottom:0}",
+      ".mo{display:flex;gap:10px;margin-top:6px}.mo span{flex:1;text-align:center;font-size:10px;color:#9AA0B8}.side{padding:18px}.side>b{font:700 15px Inter}",
+      ".chn{margin-top:16px}.chn p{display:flex;justify-content:space-between;margin:0 0 6px;font-size:13px;color:#4A4F68}.chn p b{color:#0F1222}",
+      ".chn u{display:block;height:8px;border-radius:4px;background:#EEF0F5;margin-bottom:14px;overflow:hidden}",
+      ".chn u i{display:block;height:100%;border-radius:4px;width:calc(var(--k,0)*var(--w))}.tbl{margin-top:20px;padding:6px 18px}",
+      ".tr{display:grid;grid-template-columns:2fr 1.2fr 1fr 1fr;align-items:center;height:46px;border-bottom:1px solid #EEF0F5;font-size:13px}.tr:last-child{border:0}",
+      ".th{color:#8A8FA8;font-size:12px;font-weight:600;height:40px}.tr b{display:flex;align-items:center;gap:10px;font-weight:600}",
+      ".tr b i{width:26px;height:26px;border-radius:7px}.st{justify-self:start;font:600 11px Inter;padding:4px 9px;border-radius:10px;background:#E6FBF3;color:#0E9F6E}",
+      ".st.p{background:#FFF4E0;color:#C77700}.tr span:last-child{text-align:right;font-weight:700}",
+      ".toast{position:absolute;right:24px;top:20px;display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:14px;background:#0F1222;color:#fff;font:500 13px Inter;box-shadow:0 18px 40px rgba(15,18,34,.3);opacity:var(--k,0);transform:translateY(calc((1 - var(--k,0))*-16px))}",
+      ".toast i{width:28px;height:28px;border-radius:50%;background:#2EE6A6;color:#0F1222;display:grid;place-items:center;font-style:normal;font-weight:800}",
+      ".toast b{display:block;font-size:14px}.toast small{color:#9EA3BD}"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Click to forecast",
+   "duration": 4.0,
+   "transition": {
+    "type": "push-left",
+    "duration": 0.5,
+    "ease": "easeInOutQuart"
+   },
+   "camera": {
+    "zoom": [
+     [
+      0,
+      1.05
+     ],
+     [
+      1.6,
+      1.05
+     ],
+     [
+      3.6,
+      1,
+      "easeInOutCubic"
+     ]
+    ]
+   },
+   "notes": "Interaction beat: a pointer cursor glides to the Forecast toggle and clicks at 1.0 s, the toggle flips via [data-on], dashed forecast bars grow and a toast confirms; then a scroll keyframe moves the page down to reveal the deals table.",
+   "layers": [
+    {
+     "id": "s3-bg",
+     "type": "background",
+     "fill": "#0A0B12",
+     "gradient": {
+      "type": "linear",
+      "angle": 160,
+      "stops": [
+       [
+        "#0E1A3A",
+        0
+       ],
+       [
+        "#0A0B12",
+        1
+       ]
+      ]
+     },
+     "grain": 0.3,
+     "vignette": 0.4
+    },
+    {
+     "id": "s3-waves",
+     "type": "effect",
+     "effect": "waves",
+     "y": 760,
+     "height": 900,
+     "colors": [
+      "#2EE6A6",
+      "#5B8CFF"
+     ],
+     "density": 1,
+     "speed": 0.7,
+     "opacity": 0.5,
+     "blend": "screen",
+     "seed": 7
+    },
+    {
+     "id": "s3-headline",
+     "type": "text",
+     "text": "Forecast next quarter in one click.",
+     "x": 960,
+     "y": 108,
+     "font": "Syne",
+     "weight": 700,
+     "size": 60,
+     "letterSpacing": -0.02,
+     "width": 1600,
+     "color": "#F5F7FF",
+     "highlightWords": [
+      "one",
+      "click."
+     ],
+     "highlight": "#2EE6A6",
+     "enter": {
+      "preset": "words-rise",
+      "duration": 0.5,
+      "stagger": 0.06
+     }
+    },
+    {
+     "type": "ui",
+     "device": "browser",
+     "x": 960,
+     "y": 640,
+     "width": 1440,
+     "viewport": {
+      "width": 1280,
+      "height": 720
+     },
+     "screen": "#F4F6FB",
+     "url": "app.pulseboard.io/overview",
+     "shadow": "0 50px 100px rgba(0,0,0,0.55)",
+     "id": "s3-browser",
+     "keyframes": {
+      "scroll": [
+       [
+        2.2,
+        0
+       ],
+       [
+        3.2,
+        250,
+        "easeInOutCubic"
+       ]
+      ]
+     },
+     "html": [
+      "<div class='d'><aside><div class='lg'><i></i>Pulseboard</div><nav><a class='on'><i></i>Overview</a><a><i></i>Revenue</a><a><i></i>Customers</a><a><i>",
+      "</i>Funnels</a><a><i></i>Reports</a><a><i></i>Alerts<em>3</em></a></nav><div class='ws'><b>A</b><p>Acme Studio<small>Growth plan</small></p></div></aside>",
+      "<div class='main'><div class='mc' data-scroll='1'><header><div><h1>Overview</h1><small>Live &middot; updated 2 min ago</small></div><div class='hr'>",
+      "<div class='avs'><i style='background:#FFB547'></i><i style='background:#9B7BFF'></i><i style='background:#2EE6A6'></i></div>",
+      "<span class='pill'>Last 12 months &#9662;</span><span class='btn'>Share</span></div></header><div class='kpis'><div class='k card r' data-at='-1'>",
+      "<small>Monthly recurring revenue</small><b data-count='284120' data-prefix='$' data-at='-5' data-dur='1.6'>0</b><em>&#9650; 12.4%</em><svg viewBox='0 0 84 34'>",
+      "<path d='M2 28 L14 24 L26 26 L38 16 L50 19 L62 10 L74 12 L82 4' fill='none' stroke='#5B8CFF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/>",
+      "</svg></div><div class='k card r' data-at='-1'><small>Active users</small><b data-count='48392' data-at='-5' data-dur='1.6'>0</b><em>&#9650; 8.1%</em>",
+      "<svg viewBox='0 0 84 34'>",
+      "<path d='M2 28 L14 24 L26 26 L38 16 L50 19 L62 10 L74 12 L82 4' fill='none' stroke='#5B8CFF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/>",
+      "</svg></div><div class='k card r' data-at='-1'><small>Trial conversion</small>",
+      "<b data-count='4.82' data-decimals='2' data-suffix='%' data-at='-5' data-dur='1.6'>0</b><em>&#9650; 0.6 pts</em><svg viewBox='0 0 84 34'>",
+      "<path d='M2 28 L14 24 L26 26 L38 16 L50 19 L62 10 L74 12 L82 4' fill='none' stroke='#12B886' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/>",
+      "</svg></div><div class='k card r' data-at='-1'><small>Net churn</small><b data-count='1.9' data-decimals='1' data-suffix='%' data-at='-5' data-dur='1.6'>0</b>",
+      "<em>&#9660; 0.4 pts</em><svg viewBox='0 0 84 34'>",
+      "<path d='M2 28 L14 24 L26 26 L38 16 L50 19 L62 10 L74 12 L82 4' fill='none' stroke='#12B886' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/>",
+      "</svg></div></div><div class='row'><div class='chart card r' data-at='-1'><div class='ch'><b>Revenue</b><small>Monthly &middot; USD</small>",
+      "<span class='tg' data-at='1.05' data-dur='0.2'><i></i>Forecast</span></div><div class='bars'>",
+      "<i style='--h:34%' data-at='-1' data-dur='0.7' data-ease='easeOutBack'></i><i style='--h:41%' data-at='-1' data-dur='0.7' data-ease='easeOutBack'></i>",
+      "<i style='--h:38%' data-at='-1' data-dur='0.7' data-ease='easeOutBack'></i><i style='--h:47%' data-at='-1' data-dur='0.7' data-ease='easeOutBack'></i>",
+      "<i style='--h:52%' data-at='-1' data-dur='0.7' data-ease='easeOutBack'></i><i style='--h:49%' data-at='-1' data-dur='0.7' data-ease='easeOutBack'></i>",
+      "<i style='--h:58%' data-at='-1' data-dur='0.7' data-ease='easeOutBack'></i><i style='--h:63%' data-at='-1' data-dur='0.7' data-ease='easeOutBack'></i>",
+      "<i style='--h:61%' data-at='-1' data-dur='0.7' data-ease='easeOutBack'></i><i style='--h:72%' data-at='-1' data-dur='0.7' data-ease='easeOutBack'></i>",
+      "<i style='--h:80%' data-at='-1' data-dur='0.7' data-ease='easeOutBack'></i><i style='--h:92%' data-at='-1' data-dur='0.7' data-ease='easeOutBack'></i>",
+      "<i class='f' style='--h:96%' data-at='1.2' data-dur='0.5' data-ease='easeOutBack'></i>",
+      "<i class='f' style='--h:100%' data-at='1.28' data-dur='0.5' data-ease='easeOutBack'></i>",
+      "<i class='f' style='--h:104%' data-at='1.3599999999999999' data-dur='0.5' data-ease='easeOutBack'></i></div><div class='mo'><span>Jan</span><span>Feb</span>",
+      "<span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>",
+      "<span>Jan</span><span>Feb</span><span>Mar</span></div></div><div class='side card r' data-at='-1'><b>Top channels</b><div class='chn'>",
+      "<div data-at='-1' data-dur='0.9'><p><span>Organic search</span><b>42%</b></p><u><i style='background:#5B8CFF;--w:84%'></i></u></div>",
+      "<div data-at='-1' data-dur='0.9'><p><span>Paid social</span><b>23%</b></p><u><i style='background:#9B7BFF;--w:46%'></i></u></div>",
+      "<div data-at='-1' data-dur='0.9'><p><span>Referral</span><b>18%</b></p><u><i style='background:#2EE6A6;--w:36%'></i></u></div><div data-at='-1' data-dur='0.9'>",
+      "<p><span>Email</span><b>11%</b></p><u><i style='background:#FFB547;--w:22%'></i></u></div></div></div></div><div class='tbl card'><div class='tr th'>",
+      "<span>Account</span><span>Plan</span><span>Status</span><span>ARR</span></div><div class='tr r' data-at='-1'><b><i style='background:#5B8CFF'></i>Kitebase</b>",
+      "<span>Enterprise</span><span class='st'>Won</span><span>$48,000</span></div><div class='tr r' data-at='-1'><b><i style='background:#FFB547'></i>Loomiq</b>",
+      "<span>Growth</span><span class='st'>Won</span><span>$12,600</span></div><div class='tr r' data-at='-1'><b><i style='background:#9B7BFF'></i>Halcyon Labs</b>",
+      "<span>Enterprise</span><span class='st p'>Pending</span><span>$36,400</span></div><div class='tr r' data-at='-1'><b><i style='background:#2EE6A6'>",
+      "</i>Fernhill</b><span>Starter</span><span class='st'>Won</span><span>$4,800</span></div><div class='tr r' data-at='-1'><b><i style='background:#FF5C7A'>",
+      "</i>Stackwise</b><span>Growth</span><span class='st'>Won</span><span>$9,900</span></div></div></div></div>",
+      "<div class='toast' data-at='1.5' data-dur='0.45' data-ease='easeOutBack'><i>&#10003;</i><p style='margin:0'><b>Forecast ready</b>",
+      "<small>+18% revenue next quarter</small></p></div></div>"
+     ],
+     "css": [
+      ".d{position:relative;height:100%;background:#F4F6FB;font-family:Inter;color:#0F1222}",
+      "aside{position:absolute;left:0;top:0;bottom:0;width:220px;background:#0F1222;color:#9EA3BD;padding:22px 14px}",
+      ".lg{display:flex;align-items:center;gap:10px;font:700 18px 'Syne';color:#fff;margin:0 6px 28px}",
+      ".lg i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,#5B8CFF,#2EE6A6);transform:rotate(45deg) scale(.8)}",
+      "nav a{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;font:500 14px Inter;margin-bottom:2px}",
+      "nav a i{width:16px;height:16px;border-radius:5px;border:2px solid currentColor;opacity:.7}nav a.on{background:#1E2340;color:#fff}",
+      "nav a em{margin-left:auto;font:700 11px Inter;font-style:normal;background:#FF5C7A;color:#fff;border-radius:10px;padding:2px 7px}",
+      ".ws{position:absolute;left:14px;right:14px;bottom:18px;display:flex;gap:10px;align-items:center;padding:10px;border-radius:12px;background:#161A30}",
+      ".ws b{width:32px;height:32px;border-radius:9px;background:#FFB547;color:#0F1222;display:grid;place-items:center}.ws p{margin:0;font:600 13px Inter;color:#fff}",
+      ".ws small{display:block;font-weight:400;color:#8A8FA8;font-size:11px}.main{position:absolute;left:220px;top:0;right:0;bottom:0;overflow:hidden}",
+      ".mc{padding:24px 28px}header{display:flex;justify-content:space-between;align-items:center;height:44px;margin-bottom:20px}",
+      "header h1{margin:0;font:700 24px 'Syne'}header small{color:#8A8FA8;font-size:12px}.hr{display:flex;gap:10px;align-items:center}",
+      ".pill{font:500 13px Inter;padding:9px 14px;border:1px solid #E1E4EE;border-radius:10px;background:#fff}",
+      ".btn{font:600 13px Inter;padding:10px 16px;border-radius:10px;background:#0F1222;color:#fff}.avs{display:flex}",
+      ".avs i{width:30px;height:30px;border-radius:50%;border:2px solid #F4F6FB;margin-left:-8px}",
+      ".card{background:#fff;border:1px solid #E6E8F0;border-radius:16px;box-shadow:0 1px 2px rgba(15,18,34,.04),0 8px 24px rgba(15,18,34,.04)}",
+      ".r{opacity:var(--k);transform:translateY(calc((1 - var(--k))*18px))}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;height:112px}",
+      ".k{padding:16px 18px;position:relative;overflow:hidden}.k small{font-size:12px;color:#6B7089}",
+      ".k b{display:block;font:700 28px 'Syne';letter-spacing:-.02em;margin:6px 0 4px}.k em{font:600 12px Inter;font-style:normal;color:#12B886}.k em.dn{color:#12B886}",
+      ".k svg{position:absolute;right:14px;bottom:16px;width:84px;height:34px}.row{display:grid;grid-template-columns:1fr 330px;gap:16px;margin-top:20px;height:300px}",
+      ".chart{padding:18px}.ch{display:flex;align-items:center;gap:10px;height:30px}.ch b{font:700 15px Inter}.ch small{color:#8A8FA8;font-size:12px}",
+      ".tg{margin-left:auto;display:flex;align-items:center;gap:8px;width:116px;height:30px;padding:0 10px;border-radius:15px;border:1px solid #E1E4EE;font:600 12px Inter;color:#4A4F68;background:#fff}",
+      ".tg i{width:26px;height:16px;border-radius:8px;background:#D9DCE8;position:relative}",
+      ".tg i:after{content:'';position:absolute;left:2px;top:2px;width:12px;height:12px;border-radius:50%;background:#fff;transform:translateX(calc(var(--k,0)*10px))}",
+      ".tg[data-on]{background:#EEF3FF;border-color:#5B8CFF;color:#3366FF}.tg[data-on] i{background:#5B8CFF}",
+      ".bars{display:flex;align-items:flex-end;gap:10px;height:196px;margin-top:16px;padding-bottom:22px;border-bottom:1px solid #EEF0F5;position:relative;background:repeating-linear-gradient(#fff 0 48px,#F1F3F8 48px 49px)}",
+      ".bars i{flex:1;height:calc(var(--h)*var(--k,0));border-radius:6px 6px 2px 2px;background:linear-gradient(#7FA6FF,#5B8CFF);position:relative}",
+      ".bars i:last-of-type{background:linear-gradient(#5BF0BC,#12B886)}.bars i.f{background:rgba(91,140,255,.1);border:2px dashed #5B8CFF;border-bottom:0}",
+      ".mo{display:flex;gap:10px;margin-top:6px}.mo span{flex:1;text-align:center;font-size:10px;color:#9AA0B8}.side{padding:18px}.side>b{font:700 15px Inter}",
+      ".chn{margin-top:16px}.chn p{display:flex;justify-content:space-between;margin:0 0 6px;font-size:13px;color:#4A4F68}.chn p b{color:#0F1222}",
+      ".chn u{display:block;height:8px;border-radius:4px;background:#EEF0F5;margin-bottom:14px;overflow:hidden}",
+      ".chn u i{display:block;height:100%;border-radius:4px;width:calc(var(--k,0)*var(--w))}.tbl{margin-top:20px;padding:6px 18px}",
+      ".tr{display:grid;grid-template-columns:2fr 1.2fr 1fr 1fr;align-items:center;height:46px;border-bottom:1px solid #EEF0F5;font-size:13px}.tr:last-child{border:0}",
+      ".th{color:#8A8FA8;font-size:12px;font-weight:600;height:40px}.tr b{display:flex;align-items:center;gap:10px;font-weight:600}",
+      ".tr b i{width:26px;height:26px;border-radius:7px}.st{justify-self:start;font:600 11px Inter;padding:4px 9px;border-radius:10px;background:#E6FBF3;color:#0E9F6E}",
+      ".st.p{background:#FFF4E0;color:#C77700}.tr span:last-child{text-align:right;font-weight:700}",
+      ".toast{position:absolute;right:24px;top:20px;display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:14px;background:#0F1222;color:#fff;font:500 13px Inter;box-shadow:0 18px 40px rgba(15,18,34,.3);opacity:var(--k,0);transform:translateY(calc((1 - var(--k,0))*-16px))}",
+      ".toast i{width:28px;height:28px;border-radius:50%;background:#2EE6A6;color:#0F1222;display:grid;place-items:center;font-style:normal;font-weight:800}",
+      ".toast b{display:block;font-size:14px}.toast small{color:#9EA3BD}"
+     ]
+    },
+    {
+     "id": "s3-cursor",
+     "type": "cursor",
+     "style": "pointer",
+     "size": 56,
+     "x": 1174,
+     "y": 552,
+     "start": 0.2,
+     "enter": {
+      "preset": "fade",
+      "duration": 0.2
+     },
+     "keyframes": {
+      "x": [
+       [
+        0.2,
+        1500
+       ],
+       [
+        0.9,
+        1174,
+        "easeOutCubic"
+       ],
+       [
+        2.0,
+        1184
+       ],
+       [
+        2.8,
+        1400,
+        "easeInOutCubic"
+       ]
+      ],
+      "y": [
+       [
+        0.2,
+        900
+       ],
+       [
+        0.9,
+        552,
+        "easeOutCubic"
+       ],
+       [
+        2.0,
+        558
+       ],
+       [
+        2.8,
+        820,
+        "easeInOutCubic"
+       ]
+      ]
+     },
+     "taps": [
+      1.0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Social proof",
+   "duration": 2.5,
+   "transition": {
+    "type": "zoom",
+    "duration": 0.5,
+    "ease": "easeInOutCubic"
+   },
+   "camera": {
+    "zoom": [
+     [
+      0,
+      1.04
+     ],
+     [
+      2.5,
+      1,
+      "easeOutCubic"
+     ]
+    ]
+   },
+   "notes": "Proof beat: invented company wordmarks set in different bundled fonts pop in a shuffled cascade, then a testimonial card with avatar, stars and an outcome number rises; no real brands.",
+   "layers": [
+    {
+     "id": "s4-bg",
+     "type": "background",
+     "fill": "#0A0B12",
+     "gradient": {
+      "type": "radial",
+      "stops": [
+       [
+        "#16224F",
+        0
+       ],
+       [
+        "#0A0B12",
+        0.8
+       ]
+      ]
+     },
+     "grain": 0.3,
+     "vignette": 0.4
+    },
+    {
+     "id": "s4-orbs",
+     "type": "effect",
+     "effect": "glow-orbs",
+     "colors": [
+      "#5B8CFF",
+      "#2EE6A6"
+     ],
+     "density": 0.6,
+     "opacity": 0.35,
+     "blend": "screen"
+    },
+    {
+     "id": "s4-headline",
+     "type": "text",
+     "text": "Trusted by 4,000+ fast-moving teams",
+     "x": 960,
+     "y": 170,
+     "font": "Syne",
+     "weight": 700,
+     "size": 56,
+     "letterSpacing": -0.02,
+     "width": 1600,
+     "color": "#F5F7FF",
+     "highlightWords": [
+      "4,000+"
+     ],
+     "highlight": "#2EE6A6",
+     "enter": {
+      "preset": "words-rise",
+      "duration": 0.5,
+      "stagger": 0.05
+     }
+    },
+    {
+     "id": "s4-logo-1",
+     "type": "text",
+     "text": "Kitebase",
+     "x": 330,
+     "y": 330,
+     "font": "Syne",
+     "weight": 700,
+     "size": 46,
+     "width": 380,
+     "color": "#C9CEE6",
+     "opacity": 0.85,
+     "start": 0.25,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.45,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s4-logo-2",
+     "type": "text",
+     "text": "LOOMIQ",
+     "x": 750,
+     "y": 330,
+     "font": "Montserrat",
+     "weight": 800,
+     "size": 46,
+     "width": 380,
+     "color": "#C9CEE6",
+     "opacity": 0.85,
+     "start": 0.37,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.45,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s4-logo-3",
+     "type": "text",
+     "text": "halcyon/",
+     "x": 1170,
+     "y": 330,
+     "font": "Space Grotesk",
+     "weight": 700,
+     "size": 46,
+     "width": 380,
+     "color": "#C9CEE6",
+     "opacity": 0.85,
+     "start": 0.49,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.45,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s4-logo-4",
+     "type": "text",
+     "text": "Fernhill",
+     "x": 1590,
+     "y": 330,
+     "font": "DM Serif Display",
+     "weight": 400,
+     "size": 46,
+     "width": 380,
+     "color": "#C9CEE6",
+     "opacity": 0.85,
+     "start": 0.61,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.45,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s4-logo-5",
+     "type": "text",
+     "text": "ORBITAL",
+     "x": 330,
+     "y": 450,
+     "font": "Oswald",
+     "weight": 600,
+     "size": 40,
+     "width": 380,
+     "color": "#C9CEE6",
+     "opacity": 0.85,
+     "start": 0.31,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.45,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s4-logo-6",
+     "type": "text",
+     "text": "quillo",
+     "x": 750,
+     "y": 450,
+     "font": "Poppins",
+     "weight": 700,
+     "size": 46,
+     "width": 380,
+     "color": "#C9CEE6",
+     "opacity": 0.85,
+     "start": 0.43,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.45,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s4-logo-7",
+     "type": "text",
+     "text": "Stackwise",
+     "x": 1170,
+     "y": 450,
+     "font": "Inter",
+     "weight": 800,
+     "size": 46,
+     "width": 380,
+     "color": "#C9CEE6",
+     "opacity": 0.85,
+     "start": 0.55,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.45,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s4-logo-8",
+     "type": "text",
+     "text": "NORTHPEAK",
+     "x": 1590,
+     "y": 450,
+     "font": "Archivo Black",
+     "weight": 400,
+     "size": 40,
+     "width": 380,
+     "color": "#C9CEE6",
+     "opacity": 0.85,
+     "start": 0.6699999999999999,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.45,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s4-quote",
+     "type": "ui",
+     "device": "none",
+     "x": 960,
+     "y": 790,
+     "width": 1180,
+     "viewport": {
+      "width": 760,
+      "height": 200
+     },
+     "screen": "#FFFFFF",
+     "shadow": "0 40px 80px rgba(0,0,0,0.5)",
+     "start": 0.8,
+     "enter": {
+      "preset": "rise",
+      "duration": 0.6,
+      "distance": 2
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.4
+     },
+     "html": [
+      "<div class='q'><div class='av'>PN</div><div class='tx'>",
+      "<p>&ldquo;We killed four dashboards and our Monday meeting. Pulseboard paid for itself in two weeks.&rdquo;</p><div class='by'><b>Priya Nair</b>",
+      "<span>VP Growth, Kitebase</span><em>&#9733;&#9733;&#9733;&#9733;&#9733;</em></div></div><div class='st'>",
+      "<b data-count='31' data-suffix='%' data-at='0.4' data-dur='1.2'>0</b><small>faster decisions</small></div></div>"
+     ],
+     "css": [
+      ".q{display:flex;align-items:center;gap:24px;height:100%;padding:28px 32px;font-family:Inter;color:#0F1222}",
+      ".av{flex:none;width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#FFB547,#FF5C7A);display:grid;place-items:center;font:700 22px Inter;color:#fff}",
+      ".tx{flex:1}.tx p{margin:0 0 14px;font:500 20px/1.4 Inter;letter-spacing:-.01em}.by{display:flex;align-items:center;gap:10px;font-size:13px}",
+      ".by span{color:#6B7089}.by em{font-style:normal;color:#FFB547;letter-spacing:2px}",
+      ".st{flex:none;width:150px;text-align:center;border-left:1px solid #EEF0F5;padding-left:20px}.st b{display:block;font:700 46px 'Syne';color:#3366FF}",
+      ".st small{font-size:12px;color:#6B7089}"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "CTA",
+   "duration": 3.0,
+   "transition": {
+    "type": "push-up",
+    "duration": 0.5,
+    "ease": "easeInOutQuart"
+   },
+   "camera": {
+    "zoom": [
+     [
+      0,
+      1.06
+     ],
+     [
+      3,
+      1,
+      "easeOutCubic"
+     ]
+    ]
+   },
+   "notes": "Brand close on waves: rotated-square logo mark pops with a shockwave, wordmark rises by character, the primary button pops and pulses with a glow, and two KPI chips float at the edges to keep product proof on screen; all lands by 1.2 s.",
+   "layers": [
+    {
+     "id": "s5-bg",
+     "type": "background",
+     "fill": "#0A0B12",
+     "gradient": {
+      "type": "radial",
+      "stops": [
+       [
+        "#1B2A6B",
+        0
+       ],
+       [
+        "#0E1A3A",
+        0.5
+       ],
+       [
+        "#0A0B12",
+        1
+       ]
+      ]
+     },
+     "animate": "aurora",
+     "grain": 0.3,
+     "vignette": 0.5
+    },
+    {
+     "id": "s5-waves",
+     "type": "effect",
+     "effect": "waves",
+     "y": 760,
+     "height": 800,
+     "colors": [
+      "#5B8CFF",
+      "#2EE6A6",
+      "#9B7BFF"
+     ],
+     "density": 1.4,
+     "speed": 0.8,
+     "opacity": 0.55,
+     "blend": "screen",
+     "seed": 3
+    },
+    {
+     "id": "s5-shock",
+     "type": "effect",
+     "effect": "shockwave",
+     "x": 960,
+     "y": 300,
+     "width": 900,
+     "height": 900,
+     "colors": [
+      "#2EE6A6",
+      "#5B8CFF"
+     ],
+     "start": 0.1,
+     "opacity": 0.7,
+     "blend": "screen"
+    },
+    {
+     "id": "s5-mark",
+     "type": "shape",
+     "shape": "rect",
+     "x": 960,
+     "y": 300,
+     "width": 120,
+     "height": 120,
+     "radius": 30,
+     "rotate": 45,
+     "gradient": {
+      "type": "linear",
+      "angle": 135,
+      "stops": [
+       [
+        "#5B8CFF",
+        0
+       ],
+       [
+        "#2EE6A6",
+        1
+       ]
+      ]
+     },
+     "glow": "rgba(91,140,255,0.6)",
+     "start": 0.05,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.6,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.4
+     }
+    },
+    {
+     "id": "s5-wordmark",
+     "type": "text",
+     "text": "Pulseboard",
+     "x": 960,
+     "y": 490,
+     "font": "Syne",
+     "weight": 700,
+     "size": 140,
+     "letterSpacing": -0.03,
+     "width": 1400,
+     "color": "#F5F7FF",
+     "start": 0.3,
+     "enter": {
+      "preset": "chars-rise",
+      "duration": 0.55,
+      "stagger": 0.03
+     }
+    },
+    {
+     "id": "s5-tagline",
+     "type": "text",
+     "text": "Your whole business, live.",
+     "x": 960,
+     "y": 600,
+     "font": "Inter",
+     "weight": 500,
+     "size": 44,
+     "width": 1200,
+     "color": "#AEB4D0",
+     "start": 0.55,
+     "enter": {
+      "preset": "blur",
+      "duration": 0.6
+     }
+    },
+    {
+     "id": "s5-btn",
+     "type": "shape",
+     "shape": "pill",
+     "x": 960,
+     "y": 745,
+     "width": 520,
+     "height": 104,
+     "fill": "#5B8CFF",
+     "glow": "rgba(91,140,255,0.6)",
+     "start": 0.8,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.5,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "pulse",
+      "amount": 0.5,
+      "speed": 1
+     }
+    },
+    {
+     "id": "s5-btn-text",
+     "type": "text",
+     "text": "Start free trial  →",
+     "x": 960,
+     "y": 745,
+     "font": "Inter",
+     "weight": 700,
+     "size": 40,
+     "width": 520,
+     "color": "#FFFFFF",
+     "start": 0.85,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.5,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "pulse",
+      "amount": 0.5,
+      "speed": 1
+     }
+    },
+    {
+     "id": "s5-fine",
+     "type": "text",
+     "text": "No credit card  ·  Set up in 5 minutes  ·  pulseboard.io",
+     "x": 960,
+     "y": 850,
+     "font": "Inter",
+     "weight": 500,
+     "size": 28,
+     "width": 1400,
+     "color": "#8C93B3",
+     "start": 1.0,
+     "enter": {
+      "preset": "fade",
+      "duration": 0.5
+     }
+    },
+    {
+     "id": "s5-chip-l",
+     "type": "ui",
+     "device": "none",
+     "x": 330,
+     "y": 620,
+     "width": 360,
+     "rotate": -6,
+     "viewport": {
+      "width": 220,
+      "height": 80
+     },
+     "screen": "#FFFFFF",
+     "shadow": "0 30px 60px rgba(0,0,0,0.5)",
+     "start": 0.6,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.5,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.8
+     },
+     "html": [
+      "<div class='c'><small>Active users</small><b>48,392</b></div>"
+     ],
+     "css": [
+      ".c{height:100%;padding:18px 20px;font-family:Inter;color:#0F1222;position:relative;overflow:hidden}.c small{font-size:13px;color:#6B7089}",
+      ".c b{display:block;font:700 26px 'Syne';letter-spacing:-.02em;margin:4px 0}",
+      ".c em{font:600 12px Inter;font-style:normal;color:#12B886;background:#E6FBF3;padding:4px 8px;border-radius:8px}"
+     ]
+    },
+    {
+     "id": "s5-chip-r",
+     "type": "ui",
+     "device": "none",
+     "x": 1590,
+     "y": 380,
+     "width": 360,
+     "rotate": 5,
+     "viewport": {
+      "width": 220,
+      "height": 80
+     },
+     "screen": "#FFFFFF",
+     "shadow": "0 30px 60px rgba(0,0,0,0.5)",
+     "start": 0.7,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.5,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.8,
+      "speed": 1.2
+     },
+     "html": [
+      "<div class='c'><small>MRR growth</small><b style='color:#12B886'>+12.4%</b></div>"
+     ],
+     "css": [
+      ".c{height:100%;padding:18px 20px;font-family:Inter;color:#0F1222;position:relative;overflow:hidden}.c small{font-size:13px;color:#6B7089}",
+      ".c b{display:block;font:700 26px 'Syne';letter-spacing:-.02em;margin:4px 0}",
+      ".c em{font:600 12px Inter;font-style:normal;color:#12B886;background:#E6FBF3;padding:4px 8px;border-radius:8px}"
+     ]
+    }
+   ]
+  }
+ ],
+ "audio": [
+  {
+   "kind": "music",
+   "src": "lib:music/tech",
+   "start": 0,
+   "volume": 0.7,
+   "fadeOut": 1.2
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/whoosh",
+   "start": 2.35,
+   "volume": 0.55
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/click",
+   "start": 7.5,
+   "volume": 0.75
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/ding",
+   "start": 8.0,
+   "volume": 0.55
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/swoosh-up",
+   "start": 9.8,
+   "volume": 0.5
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/pop",
+   "start": 10.3,
+   "volume": 0.55
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/shimmer",
+   "start": 12.1,
+   "volume": 0.5
+  }
+ ]
+}

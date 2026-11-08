@@ -1,0 +1,276 @@
+{
+  "license": "CC0-1.0",
+  "generator": "scripts/make-audio.mjs",
+  "music": [
+    {
+      "id": "energetic",
+      "file": "music/energetic.m4a",
+      "title": "Energetic",
+      "bpm": 128,
+      "key": "A major",
+      "duration": 32,
+      "mood": [
+        "energetic",
+        "sport",
+        "sale",
+        "edm"
+      ],
+      "description": "Driving four-on-the-floor EDM pop with pumping supersaw chords, rolling bass, a snare-roll build and a bright pluck arp drop around 15s."
+    },
+    {
+      "id": "upbeat-pop",
+      "file": "music/upbeat-pop.m4a",
+      "title": "Upbeat Pop",
+      "bpm": 110,
+      "key": "C major",
+      "duration": 32,
+      "mood": [
+        "happy",
+        "upbeat",
+        "playful",
+        "lifestyle"
+      ],
+      "description": "Happy, bouncy pop with plucked guitar-like chords, claps, shaker and a catchy mallet melody."
+    },
+    {
+      "id": "chill",
+      "file": "music/chill.m4a",
+      "title": "Chill",
+      "bpm": 85,
+      "key": "C major",
+      "duration": 32,
+      "mood": [
+        "chill",
+        "lofi",
+        "relaxed",
+        "cozy"
+      ],
+      "description": "Mellow lo-fi groove with warm electric piano chords, swung soft drums, round sub bass and light vinyl crackle."
+    },
+    {
+      "id": "corporate",
+      "file": "music/corporate.m4a",
+      "title": "Corporate",
+      "bpm": 100,
+      "key": "G major",
+      "duration": 32,
+      "mood": [
+        "corporate",
+        "optimistic",
+        "clean",
+        "business"
+      ],
+      "description": "Clean, optimistic piano arpeggios over light drums and bass, with plucks and a soft pad lifting the second half."
+    },
+    {
+      "id": "cinematic",
+      "file": "music/cinematic.m4a",
+      "title": "Cinematic",
+      "bpm": 90,
+      "key": "D minor",
+      "duration": 32,
+      "mood": [
+        "cinematic",
+        "epic",
+        "dramatic",
+        "trailer"
+      ],
+      "description": "Epic trailer build: pads, string ostinato and taiko toms, risers into big impact hits at 8s and 24s."
+    },
+    {
+      "id": "tech",
+      "file": "music/tech.m4a",
+      "title": "Tech",
+      "bpm": 120,
+      "key": "A minor",
+      "duration": 32,
+      "mood": [
+        "tech",
+        "modern",
+        "product",
+        "minimal"
+      ],
+      "description": "Minimal, modern product-launch groove with a pulsing filtered synth arp, tight kick, pulse bass and glassy blips."
+    },
+    {
+      "id": "luxury",
+      "file": "music/luxury.m4a",
+      "title": "Luxury",
+      "bpm": 75,
+      "key": "Eb major",
+      "duration": 32,
+      "mood": [
+        "luxury",
+        "elegant",
+        "premium",
+        "calm"
+      ],
+      "description": "Slow, elegant and spacious: warm pads, soft piano and sparse bell motifs over a gentle pulse."
+    }
+  ],
+  "sfx": [
+    {
+      "id": "whoosh",
+      "file": "sfx/whoosh.m4a",
+      "title": "Whoosh",
+      "duration": 0.6,
+      "tags": [
+        "transition",
+        "movement"
+      ],
+      "description": "Filtered noise sweep panning left to right."
+    },
+    {
+      "id": "whoosh-long",
+      "file": "sfx/whoosh-long.m4a",
+      "title": "Whoosh Long",
+      "duration": 1.2,
+      "tags": [
+        "transition",
+        "movement"
+      ],
+      "description": "Longer, fuller airy whoosh with low body and high air."
+    },
+    {
+      "id": "swoosh-up",
+      "file": "sfx/swoosh-up.m4a",
+      "title": "Swoosh Up",
+      "duration": 0.8,
+      "tags": [
+        "transition",
+        "rise",
+        "reveal"
+      ],
+      "description": "Rising airy swoosh with a soft tonal lift."
+    },
+    {
+      "id": "pop",
+      "file": "sfx/pop.m4a",
+      "title": "Pop",
+      "duration": 0.15,
+      "tags": [
+        "ui",
+        "appear",
+        "bubble"
+      ],
+      "description": "Short bubbly pop for elements appearing."
+    },
+    {
+      "id": "click",
+      "file": "sfx/click.m4a",
+      "title": "Click",
+      "duration": 0.06,
+      "tags": [
+        "ui",
+        "button"
+      ],
+      "description": "Crisp UI click."
+    },
+    {
+      "id": "impact",
+      "file": "sfx/impact.m4a",
+      "title": "Impact",
+      "duration": 1.3,
+      "tags": [
+        "hit",
+        "boom",
+        "reveal"
+      ],
+      "description": "Deep cinematic boom with sub and noise tail."
+    },
+    {
+      "id": "hit",
+      "file": "sfx/hit.m4a",
+      "title": "Hit",
+      "duration": 0.4,
+      "tags": [
+        "hit",
+        "accent"
+      ],
+      "description": "Snappy punchy accent hit."
+    },
+    {
+      "id": "riser",
+      "file": "sfx/riser.m4a",
+      "title": "Riser",
+      "duration": 2,
+      "tags": [
+        "build",
+        "tension",
+        "transition"
+      ],
+      "description": "Noise and tone rising to a hard cut."
+    },
+    {
+      "id": "shimmer",
+      "file": "sfx/shimmer.m4a",
+      "title": "Shimmer",
+      "duration": 1.5,
+      "tags": [
+        "sparkle",
+        "magic",
+        "reveal"
+      ],
+      "description": "Sparkly high bell cascade with airy tail."
+    },
+    {
+      "id": "ding",
+      "file": "sfx/ding.m4a",
+      "title": "Ding",
+      "duration": 1,
+      "tags": [
+        "notification",
+        "success",
+        "ui"
+      ],
+      "description": "Bright notification bell."
+    },
+    {
+      "id": "glitch",
+      "file": "sfx/glitch.m4a",
+      "title": "Glitch",
+      "duration": 0.4,
+      "tags": [
+        "digital",
+        "tech",
+        "transition"
+      ],
+      "description": "Digital stutter with bit-crushed slices."
+    },
+    {
+      "id": "bass-drop",
+      "file": "sfx/bass-drop.m4a",
+      "title": "Bass Drop",
+      "duration": 1,
+      "tags": [
+        "drop",
+        "boom",
+        "hit"
+      ],
+      "description": "Sub bass pitch drop."
+    },
+    {
+      "id": "typing",
+      "file": "sfx/typing.m4a",
+      "title": "Typing",
+      "duration": 1,
+      "tags": [
+        "keyboard",
+        "tech",
+        "ui"
+      ],
+      "description": "Short burst of keyboard ticks."
+    },
+    {
+      "id": "transition-swish",
+      "file": "sfx/transition-swish.m4a",
+      "title": "Transition Swish",
+      "duration": 0.5,
+      "tags": [
+        "transition",
+        "fast"
+      ],
+      "description": "Fast high swish panning right to left."
+    }
+  ]
+}

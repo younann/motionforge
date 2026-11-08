@@ -1,0 +1,1133 @@
+{
+ "title": "Aeris Glide 2: run on air",
+ "width": 1080,
+ "height": 1920,
+ "fps": 30,
+ "background": "#0E0E10",
+ "style": {
+  "palette": [
+   "#0E0E10",
+   "#FF5A1F",
+   "#F5F1EA",
+   "#FFB21E"
+  ],
+  "fonts": [
+   "Anton",
+   "Inter",
+   "Instrument Serif"
+  ]
+ },
+ "scenes": [
+  {
+   "id": "s1",
+   "name": "Hook: hero shot",
+   "duration": 2.6,
+   "camera": {
+    "zoom": [
+     [
+      0,
+      1.18
+     ],
+     [
+      2.6,
+      1,
+      "easeOutCubic"
+     ]
+    ],
+    "rotate": [
+     [
+      0,
+      -2
+     ],
+     [
+      2.6,
+      0,
+      "easeOutCubic"
+     ]
+    ]
+   },
+   "notes": "Full-bleed generated hero photo with a fast camera settle from 1.18x, speed-lines and a giant condensed headline revealed line by line; ink-black type stays readable over both the orange backdrop and the white shoe.",
+   "layers": [
+    {
+     "id": "s1-bg",
+     "type": "background",
+     "fill": "#FF5A1F"
+    },
+    {
+     "id": "s1-hero",
+     "type": "image",
+     "x": 540,
+     "y": 960,
+     "width": 1080,
+     "height": 1920,
+     "fit": "cover",
+     "prompt": "studio product photograph of a single sleek white knit running sneaker with a thick vivid orange foam sole, floating mid-air at a dynamic diagonal angle in the lower half of the frame, seamless vivid orange background with lots of empty space above, hard rim light, soft shadow far below, 85mm lens, ultra sharp, premium commercial advertising photography",
+     "loop": {
+      "preset": "kenburns",
+      "amount": 0.6
+     }
+    },
+    {
+     "id": "s1-speed",
+     "type": "effect",
+     "effect": "speed-lines",
+     "colors": [
+      "#FFFFFF",
+      "#FFD9C7"
+     ],
+     "density": 0.8,
+     "speed": 1.4,
+     "opacity": 0.45,
+     "blend": "screen"
+    },
+    {
+     "id": "s1-kicker",
+     "type": "text",
+     "text": "NEW  ·  AERIS GLIDE 2",
+     "x": 540,
+     "y": 260,
+     "font": "Inter",
+     "weight": 800,
+     "size": 32,
+     "letterSpacing": 0.26,
+     "color": "#FFFFFF",
+     "background": "#0E0E10",
+     "padding": 26,
+     "radius": 40,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.45,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s1-headline",
+     "type": "text",
+     "text": "RUN ON\nAIR.",
+     "x": 540,
+     "y": 610,
+     "font": "Anton",
+     "size": 260,
+     "lineHeight": 0.9,
+     "letterSpacing": -0.01,
+     "color": "#0E0E10",
+     "enter": {
+      "preset": "lines-rise",
+      "duration": 0.7,
+      "stagger": 0.12,
+      "delay": 0.1,
+      "ease": "easeOutExpo"
+     }
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Product hero",
+   "duration": 2.8,
+   "transition": {
+    "type": "zoom",
+    "duration": 0.4,
+    "ease": "easeInOutCubic"
+   },
+   "camera": {
+    "zoom": [
+     [
+      0,
+      1
+     ],
+     [
+      2.8,
+      1.05,
+      "easeInOutSine"
+     ]
+    ]
+   },
+   "notes": "The product as a floating framed photo: rotateY tilt that slowly turns, float loop, orange glow and drop shadow underneath, sparkles on top and a price sticker that pops with easeOutBack.",
+   "layers": [
+    {
+     "id": "s2-bg",
+     "type": "background",
+     "fill": "#0E0E10",
+     "gradient": {
+      "type": "radial",
+      "stops": [
+       [
+        "#3A1608",
+        0
+       ],
+       [
+        "#0E0E10",
+        0.7
+       ]
+      ]
+     },
+     "grain": 0.4,
+     "vignette": 0.5
+    },
+    {
+     "id": "s2-headline",
+     "type": "text",
+     "text": "182 GRAMS.\nZERO DRAG.",
+     "x": 540,
+     "y": 340,
+     "font": "Anton",
+     "size": 170,
+     "lineHeight": 0.95,
+     "color": "#F5F1EA",
+     "highlightWords": [
+      "ZERO",
+      "DRAG."
+     ],
+     "highlight": "#FF5A1F",
+     "enter": {
+      "preset": "lines-rise",
+      "duration": 0.65,
+      "stagger": 0.1,
+      "delay": 0.1
+     }
+    },
+    {
+     "id": "s2-glow",
+     "type": "shape",
+     "shape": "circle",
+     "x": 540,
+     "y": 1120,
+     "width": 820,
+     "height": 820,
+     "fill": "#FF5A1F",
+     "blur": 130,
+     "opacity": 0.55,
+     "blend": "screen",
+     "loop": {
+      "preset": "breathe",
+      "speed": 0.9
+     }
+    },
+    {
+     "id": "s2-product",
+     "type": "image",
+     "x": 540,
+     "y": 1100,
+     "width": 860,
+     "height": 860,
+     "mask": "rounded",
+     "prompt": "studio product photograph of a single sleek white knit running sneaker with a thick vivid orange foam sole, clean side profile, floating against a deep charcoal seamless background, dramatic orange rim light from behind, soft reflection below, 85mm lens, ultra sharp, premium commercial advertising photography",
+     "shadow": "0 50px 80px rgba(0,0,0,0.6)",
+     "keyframes": {
+      "rotateY": [
+       [
+        0,
+        -22
+       ],
+       [
+        2.8,
+        10,
+        "easeOutCubic"
+       ]
+      ],
+      "rotateX": [
+       [
+        0,
+        8
+       ],
+       [
+        2.8,
+        2,
+        "easeOutCubic"
+       ]
+      ]
+     },
+     "enter": {
+      "preset": "blur",
+      "duration": 0.7
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.8
+     }
+    },
+    {
+     "id": "s2-sparkles",
+     "type": "effect",
+     "effect": "sparkles",
+     "x": 540,
+     "y": 1100,
+     "width": 1000,
+     "height": 1000,
+     "colors": [
+      "#FFFFFF",
+      "#FFD9A8"
+     ],
+     "density": 1.1,
+     "opacity": 0.9,
+     "blend": "screen"
+    },
+    {
+     "id": "s2-sticker",
+     "type": "shape",
+     "shape": "circle",
+     "x": 840,
+     "y": 1540,
+     "width": 250,
+     "height": 250,
+     "fill": "#FF5A1F",
+     "glow": "rgba(255,90,31,0.6)",
+     "shadow": "0 20px 40px rgba(0,0,0,0.45)",
+     "rotate": 12,
+     "start": 0.9,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.55,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "sway",
+      "amount": 0.6
+     }
+    },
+    {
+     "id": "s2-sticker-price",
+     "type": "text",
+     "text": "ONLY\n$129",
+     "x": 840,
+     "y": 1540,
+     "width": 250,
+     "rotate": 12,
+     "font": "Anton",
+     "size": 74,
+     "lineHeight": 0.92,
+     "color": "#0E0E10",
+     "start": 0.9,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.55,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "sway",
+      "amount": 0.6
+     }
+    },
+    {
+     "id": "s2-sub",
+     "type": "text",
+     "text": "Our lightest runner, ever.",
+     "x": 440,
+     "y": 1610,
+     "width": 640,
+     "align": "left",
+     "font": "Inter",
+     "weight": 600,
+     "size": 44,
+     "color": "#C9C2B8",
+     "start": 0.6,
+     "enter": {
+      "preset": "words-rise",
+      "duration": 0.5,
+      "stagger": 0.06
+     }
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Feature callouts",
+   "duration": 2.8,
+   "transition": {
+    "type": "push-left",
+    "duration": 0.4,
+    "ease": "easeInOutQuart"
+   },
+   "notes": "Technical callouts: a pulsing dot on each part of the shoe, a shape line that draws from its left end with progress 0 to 1 (x,y = midpoint of dot and label, width = length, rotate = angle from dot to label), then a label pill slides in at its end; the three callouts cascade 0.3 s apart.",
+   "layers": [
+    {
+     "id": "s3-bg",
+     "type": "background",
+     "fill": "#0E0E10",
+     "gradient": {
+      "type": "radial",
+      "stops": [
+       [
+        "#2A1208",
+        0
+       ],
+       [
+        "#0E0E10",
+        0.75
+       ]
+      ]
+     },
+     "grain": 0.4,
+     "vignette": 0.5
+    },
+    {
+     "id": "s3-headline",
+     "type": "text",
+     "text": "BUILT TO FLY.",
+     "x": 540,
+     "y": 330,
+     "font": "Anton",
+     "size": 160,
+     "color": "#F5F1EA",
+     "enter": {
+      "preset": "chars-rise",
+      "duration": 0.55,
+      "stagger": 0.03
+     }
+    },
+    {
+     "id": "s3-product",
+     "type": "image",
+     "x": 540,
+     "y": 1060,
+     "width": 860,
+     "height": 860,
+     "scale": 1.05,
+     "mask": "rounded",
+     "prompt": "studio product photograph of a single sleek white knit running sneaker with a thick vivid orange foam sole, clean side profile, floating against a deep charcoal seamless background, dramatic orange rim light from behind, soft reflection below, 85mm lens, ultra sharp, premium commercial advertising photography",
+     "shadow": "0 50px 80px rgba(0,0,0,0.6)",
+     "loop": {
+      "preset": "kenburns",
+      "amount": 0.4
+     }
+    },
+    {
+     "id": "s3-dot-a",
+     "type": "shape",
+     "shape": "circle",
+     "x": 470,
+     "y": 940,
+     "width": 30,
+     "height": 30,
+     "fill": "#FF5A1F",
+     "glow": "#FF5A1F",
+     "stroke": "#FFFFFF",
+     "strokeWidth": 5,
+     "start": 0.4,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.35,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "pulse",
+      "amount": 2,
+      "speed": 1.5
+     }
+    },
+    {
+     "id": "s3-line-a",
+     "type": "shape",
+     "shape": "line",
+     "x": 550,
+     "y": 842,
+     "width": 252,
+     "height": 4,
+     "rotate": -51,
+     "fill": "#FFFFFF",
+     "start": 0.5,
+     "keyframes": {
+      "progress": [
+       [
+        0.5,
+        0
+       ],
+       [
+        0.85,
+        1,
+        "easeOutCubic"
+       ]
+      ]
+     }
+    },
+    {
+     "id": "s3-label-a",
+     "type": "text",
+     "text": "Recycled knit upper",
+     "x": 730,
+     "y": 700,
+     "width": 520,
+     "font": "Inter",
+     "weight": 700,
+     "size": 36,
+     "color": "#0E0E10",
+     "background": "#F5F1EA",
+     "padding": 24,
+     "radius": 16,
+     "start": 0.8,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.4,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s3-dot-b",
+     "type": "shape",
+     "shape": "circle",
+     "x": 560,
+     "y": 1190,
+     "width": 30,
+     "height": 30,
+     "fill": "#FF5A1F",
+     "glow": "#FF5A1F",
+     "stroke": "#FFFFFF",
+     "strokeWidth": 5,
+     "start": 0.7,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.35,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "pulse",
+      "amount": 2,
+      "speed": 1.5
+     }
+    },
+    {
+     "id": "s3-line-b",
+     "type": "shape",
+     "shape": "line",
+     "x": 490,
+     "y": 1312,
+     "width": 282,
+     "height": 4,
+     "rotate": 120,
+     "fill": "#FFFFFF",
+     "start": 0.8,
+     "keyframes": {
+      "progress": [
+       [
+        0.8,
+        0
+       ],
+       [
+        1.15,
+        1,
+        "easeOutCubic"
+       ]
+      ]
+     }
+    },
+    {
+     "id": "s3-label-b",
+     "type": "text",
+     "text": "Nitro foam: +18% return",
+     "x": 380,
+     "y": 1480,
+     "width": 600,
+     "font": "Inter",
+     "weight": 700,
+     "size": 36,
+     "color": "#0E0E10",
+     "background": "#FF5A1F",
+     "padding": 24,
+     "radius": 16,
+     "start": 1.1,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.4,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s3-dot-c",
+     "type": "shape",
+     "shape": "circle",
+     "x": 740,
+     "y": 1150,
+     "width": 30,
+     "height": 30,
+     "fill": "#FF5A1F",
+     "glow": "#FF5A1F",
+     "stroke": "#FFFFFF",
+     "strokeWidth": 5,
+     "start": 1.0,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.35,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "pulse",
+      "amount": 2,
+      "speed": 1.5
+     }
+    },
+    {
+     "id": "s3-line-c",
+     "type": "shape",
+     "shape": "line",
+     "x": 765,
+     "y": 1272,
+     "width": 250,
+     "height": 4,
+     "rotate": 78,
+     "fill": "#FFFFFF",
+     "start": 1.1,
+     "keyframes": {
+      "progress": [
+       [
+        1.1,
+        0
+       ],
+       [
+        1.45,
+        1,
+        "easeOutCubic"
+       ]
+      ]
+     }
+    },
+    {
+     "id": "s3-label-c",
+     "type": "text",
+     "text": "Carbon plate",
+     "x": 780,
+     "y": 1440,
+     "width": 420,
+     "font": "Inter",
+     "weight": 700,
+     "size": 36,
+     "color": "#0E0E10",
+     "background": "#F5F1EA",
+     "padding": 24,
+     "radius": 16,
+     "start": 1.4,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.4,
+      "ease": "easeOutBack"
+     }
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Lifestyle + rating",
+   "duration": 2.4,
+   "transition": {
+    "type": "slide-up",
+    "duration": 0.4,
+    "ease": "easeInOutQuart"
+   },
+   "notes": "Social proof over a generated lifestyle photo: kenburns drift, a dark gradient scrim for contrast, five star shapes popping 0.08 s apart and an editorial serif quote.",
+   "layers": [
+    {
+     "id": "s4-bg",
+     "type": "background",
+     "fill": "#0E0E10"
+    },
+    {
+     "id": "s4-photo",
+     "type": "image",
+     "x": 540,
+     "y": 960,
+     "width": 1080,
+     "height": 1920,
+     "fit": "cover",
+     "prompt": "low angle close-up of a runner's feet mid-stride on a wet asphalt city street at sunrise, white running sneakers with vivid orange soles in sharp focus, small water splash, warm rim light, darker moody background, cinematic sports editorial photography",
+     "loop": {
+      "preset": "kenburns",
+      "amount": 0.8
+     }
+    },
+    {
+     "id": "s4-scrim",
+     "type": "shape",
+     "shape": "rect",
+     "x": 540,
+     "y": 1240,
+     "width": 1080,
+     "height": 1360,
+     "gradient": {
+      "type": "linear",
+      "angle": 180,
+      "stops": [
+       [
+        "rgba(14,14,16,0)",
+        0
+       ],
+       [
+        "rgba(14,14,16,0.88)",
+        0.4
+       ],
+       [
+        "rgba(14,14,16,0.97)",
+        1
+       ]
+      ]
+     }
+    },
+    {
+     "id": "s4-star-1",
+     "type": "shape",
+     "shape": "star",
+     "x": 340,
+     "y": 1110,
+     "width": 78,
+     "height": 78,
+     "fill": "#FFB21E",
+     "glow": "rgba(255,178,30,0.6)",
+     "start": 0.3,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.4,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s4-star-2",
+     "type": "shape",
+     "shape": "star",
+     "x": 440,
+     "y": 1110,
+     "width": 78,
+     "height": 78,
+     "fill": "#FFB21E",
+     "glow": "rgba(255,178,30,0.6)",
+     "start": 0.38,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.4,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s4-star-3",
+     "type": "shape",
+     "shape": "star",
+     "x": 540,
+     "y": 1110,
+     "width": 78,
+     "height": 78,
+     "fill": "#FFB21E",
+     "glow": "rgba(255,178,30,0.6)",
+     "start": 0.46,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.4,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s4-star-4",
+     "type": "shape",
+     "shape": "star",
+     "x": 640,
+     "y": 1110,
+     "width": 78,
+     "height": 78,
+     "fill": "#FFB21E",
+     "glow": "rgba(255,178,30,0.6)",
+     "start": 0.54,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.4,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s4-star-5",
+     "type": "shape",
+     "shape": "star",
+     "x": 740,
+     "y": 1110,
+     "width": 78,
+     "height": 78,
+     "fill": "#FFB21E",
+     "glow": "rgba(255,178,30,0.6)",
+     "start": 0.62,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.4,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s4-rating",
+     "type": "text",
+     "text": "4.9 from 3,200+ runners",
+     "x": 540,
+     "y": 1210,
+     "font": "Inter",
+     "weight": 700,
+     "size": 44,
+     "color": "#F5F1EA",
+     "start": 0.7,
+     "enter": {
+      "preset": "rise",
+      "duration": 0.5
+     }
+    },
+    {
+     "id": "s4-quote",
+     "type": "text",
+     "text": "“Feels like\ncheating.”",
+     "x": 540,
+     "y": 1410,
+     "font": "Instrument Serif",
+     "weight": 400,
+     "italic": true,
+     "size": 140,
+     "lineHeight": 0.95,
+     "color": "#FFFFFF",
+     "start": 0.85,
+     "enter": {
+      "preset": "words-blur",
+      "duration": 0.6,
+      "stagger": 0.08
+     }
+    },
+    {
+     "id": "s4-author",
+     "type": "text",
+     "text": "DANA K.  ·  MARATHONER",
+     "x": 540,
+     "y": 1570,
+     "font": "Inter",
+     "weight": 700,
+     "size": 28,
+     "letterSpacing": 0.24,
+     "color": "#FF5A1F",
+     "start": 1.1,
+     "enter": {
+      "preset": "tracking",
+      "duration": 0.6
+     }
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Offer + CTA",
+   "duration": 3.0,
+   "transition": {
+    "type": "flash",
+    "duration": 0.4
+   },
+   "camera": {
+    "zoom": [
+     [
+      0,
+      1.08
+     ],
+     [
+      0.6,
+      1,
+      "easeOutExpo"
+     ]
+    ]
+   },
+   "notes": "Offer close on bold brand orange: the discount slams in with zoom-out plus a shockwave, the product spins in with rotateY, old price is struck through by a drawing line, and a black Shop now pill pulses; light-leak warms the frame.",
+   "layers": [
+    {
+     "id": "s5-bg",
+     "type": "background",
+     "fill": "#FF5A1F",
+     "gradient": {
+      "type": "radial",
+      "stops": [
+       [
+        "#FF8A4C",
+        0
+       ],
+       [
+        "#FF5A1F",
+        0.55
+       ],
+       [
+        "#E2400A",
+        1
+       ]
+      ]
+     },
+     "grain": 0.3,
+     "vignette": 0.3
+    },
+    {
+     "id": "s5-leak",
+     "type": "effect",
+     "effect": "light-leak",
+     "colors": [
+      "#FFD36B",
+      "#FFFFFF",
+      "#FF9A3D"
+     ],
+     "density": 0.8,
+     "opacity": 0.6,
+     "blend": "screen"
+    },
+    {
+     "id": "s5-shock",
+     "type": "effect",
+     "effect": "shockwave",
+     "x": 540,
+     "y": 520,
+     "width": 1080,
+     "height": 1080,
+     "colors": [
+      "#FFFFFF",
+      "#FFE2B5"
+     ],
+     "start": 0.15,
+     "opacity": 0.85,
+     "blend": "screen"
+    },
+    {
+     "id": "s5-label",
+     "type": "text",
+     "text": "THIS WEEK ONLY",
+     "x": 540,
+     "y": 270,
+     "font": "Inter",
+     "weight": 800,
+     "size": 34,
+     "letterSpacing": 0.3,
+     "color": "#FFFFFF",
+     "background": "#0E0E10",
+     "padding": 26,
+     "radius": 40,
+     "enter": {
+      "preset": "drop",
+      "duration": 0.45,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s5-discount",
+     "type": "text",
+     "text": "−30%",
+     "x": 540,
+     "y": 520,
+     "font": "Anton",
+     "size": 360,
+     "lineHeight": 0.9,
+     "color": "#0E0E10",
+     "start": 0.1,
+     "enter": {
+      "preset": "zoom-out",
+      "duration": 0.5,
+      "ease": "easeOutExpo"
+     },
+     "loop": {
+      "preset": "pulse",
+      "amount": 0.4,
+      "speed": 1.07
+     }
+    },
+    {
+     "id": "s5-product",
+     "type": "image",
+     "x": 540,
+     "y": 1000,
+     "width": 860,
+     "height": 860,
+     "scale": 0.68,
+     "mask": "rounded",
+     "prompt": "studio product photograph of a single sleek white knit running sneaker with a thick vivid orange foam sole, clean side profile, floating against a deep charcoal seamless background, dramatic orange rim light from behind, soft reflection below, 85mm lens, ultra sharp, premium commercial advertising photography",
+     "shadow": "0 40px 70px rgba(80,20,0,0.55)",
+     "start": 0.3,
+     "keyframes": {
+      "rotateY": [
+       [
+        0.3,
+        70
+       ],
+       [
+        1.1,
+        -8,
+        "easeOutCubic"
+       ],
+       [
+        3,
+        6,
+        "easeInOutSine"
+       ]
+      ]
+     },
+     "enter": {
+      "preset": "fade",
+      "duration": 0.3
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.6
+     }
+    },
+    {
+     "id": "s5-price",
+     "type": "text",
+     "text": "$129",
+     "x": 430,
+     "y": 1380,
+     "width": 360,
+     "font": "Anton",
+     "size": 150,
+     "color": "#0E0E10",
+     "start": 0.6,
+     "enter": {
+      "preset": "rise",
+      "duration": 0.5
+     }
+    },
+    {
+     "id": "s5-old-price",
+     "type": "text",
+     "text": "$185",
+     "x": 700,
+     "y": 1395,
+     "width": 220,
+     "font": "Anton",
+     "size": 84,
+     "color": "rgba(14,14,16,0.5)",
+     "start": 0.7,
+     "enter": {
+      "preset": "rise",
+      "duration": 0.5
+     }
+    },
+    {
+     "id": "s5-strike",
+     "type": "shape",
+     "shape": "line",
+     "x": 700,
+     "y": 1395,
+     "width": 170,
+     "height": 7,
+     "rotate": -12,
+     "fill": "#0E0E10",
+     "start": 0.95,
+     "keyframes": {
+      "progress": [
+       [
+        0.95,
+        0
+       ],
+       [
+        1.2,
+        1,
+        "easeOutCubic"
+       ]
+      ]
+     }
+    },
+    {
+     "id": "s5-btn",
+     "type": "shape",
+     "shape": "pill",
+     "x": 540,
+     "y": 1545,
+     "width": 600,
+     "height": 130,
+     "fill": "#0E0E10",
+     "shadow": "0 20px 40px rgba(80,20,0,0.4)",
+     "start": 1.0,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.5,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "pulse",
+      "amount": 0.5,
+      "speed": 1.07
+     }
+    },
+    {
+     "id": "s5-btn-text",
+     "type": "text",
+     "text": "SHOP NOW  →",
+     "x": 540,
+     "y": 1545,
+     "width": 600,
+     "font": "Inter",
+     "weight": 800,
+     "size": 46,
+     "letterSpacing": 0.06,
+     "color": "#FFFFFF",
+     "start": 1.05,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.5,
+      "ease": "easeOutBack"
+     },
+     "loop": {
+      "preset": "pulse",
+      "amount": 0.5,
+      "speed": 1.07
+     }
+    },
+    {
+     "id": "s5-url",
+     "type": "text",
+     "text": "aeris.run  ·  Free shipping & returns",
+     "x": 540,
+     "y": 1665,
+     "font": "Inter",
+     "weight": 600,
+     "size": 32,
+     "color": "#FFFFFF",
+     "start": 1.2,
+     "enter": {
+      "preset": "fade",
+      "duration": 0.5
+     }
+    }
+   ]
+  }
+ ],
+ "audio": [
+  {
+   "kind": "music",
+   "src": "lib:music/energetic",
+   "start": 0,
+   "volume": 0.75,
+   "fadeOut": 1.0
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/impact",
+   "start": 0.05,
+   "volume": 0.55
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/whoosh",
+   "start": 2.05,
+   "volume": 0.55
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/shimmer",
+   "start": 2.6,
+   "volume": 0.45
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/pop",
+   "start": 5.4,
+   "volume": 0.6
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/swoosh-up",
+   "start": 6.75,
+   "volume": 0.5
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/bass-drop",
+   "start": 9.05,
+   "volume": 0.7
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/click",
+   "start": 10.0,
+   "volume": 0.7
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+All fonts in this folder are licensed under the SIL Open Font License 1.1
+(https://openfontlicense.org). Sourced from the Fontsource packages of:
+Inter, Montserrat, Playfair Display, Space Grotesk, Oswald, Syne, DM Sans,
+Bebas Neue, Anton, Archivo Black, DM Serif Display, Instrument Serif, Poppins,
+JetBrains Mono. Copyright belongs to their respective authors.

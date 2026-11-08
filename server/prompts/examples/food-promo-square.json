@@ -1,0 +1,990 @@
+{
+ "title": "Bloom Boba: buy 1 get 1 this weekend",
+ "width": 1080,
+ "height": 1080,
+ "fps": 30,
+ "background": "#3B1F12",
+ "style": {
+  "palette": [
+   "#3B1F12",
+   "#FFF4E6",
+   "#FF5D8F",
+   "#FFB627"
+  ],
+  "fonts": [
+   "Archivo Black",
+   "Poppins"
+  ]
+ },
+ "scenes": [
+  {
+   "id": "s1",
+   "name": "Hook: craving",
+   "duration": 2.4,
+   "camera": {
+    "zoom": [
+     [
+      0,
+      1.12
+     ],
+     [
+      2.4,
+      1,
+      "easeOutCubic"
+     ]
+    ]
+   },
+   "notes": "Appetizing full-bleed generated drink photo with a slow settle and warm bokeh drifting on top; the hook is two tilted sticker pills that pop in with easeOutBack 0.2 s apart, playful rather than corporate.",
+   "layers": [
+    {
+     "id": "s1-bg",
+     "type": "background",
+     "fill": "#3B1F12"
+    },
+    {
+     "id": "s1-photo",
+     "type": "image",
+     "x": 540,
+     "y": 540,
+     "width": 1080,
+     "height": 1080,
+     "fit": "cover",
+     "prompt": "close-up commercial food photograph of a brown sugar bubble tea in a tall plain unbranded clear cup, thick dark brown sugar syrup in tiger stripes over creamy white milk, a layer of glossy black tapioca pearls at the bottom, condensation drops, warm cafe background with golden bokeh, golden hour light, 50mm lens, appetizing",
+     "loop": {
+      "preset": "kenburns",
+      "amount": 0.7
+     }
+    },
+    {
+     "id": "s1-shade",
+     "type": "shape",
+     "shape": "rect",
+     "x": 540,
+     "y": 200,
+     "width": 1080,
+     "height": 400,
+     "gradient": {
+      "type": "linear",
+      "angle": 180,
+      "stops": [
+       [
+        "rgba(59,31,18,0.65)",
+        0
+       ],
+       [
+        "rgba(59,31,18,0)",
+        1
+       ]
+      ]
+     }
+    },
+    {
+     "id": "s1-bokeh",
+     "type": "effect",
+     "effect": "bokeh",
+     "colors": [
+      "#FFC48C",
+      "#FFE2B5",
+      "#FF9EBB"
+     ],
+     "density": 1.2,
+     "speed": 0.8,
+     "opacity": 0.7,
+     "blend": "screen"
+    },
+    {
+     "id": "s1-pill-1",
+     "type": "text",
+     "text": "Weekend",
+     "x": 400,
+     "y": 170,
+     "font": "Archivo Black",
+     "weight": 400,
+     "size": 96,
+     "width": 760,
+     "color": "#3B1F12",
+     "background": "#FFB627",
+     "padding": 40,
+     "radius": 60,
+     "rotate": -5,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.6,
+      "ease": "easeOutBack",
+      "delay": 0
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.5
+     }
+    },
+    {
+     "id": "s1-pill-2",
+     "type": "text",
+     "text": "craving?",
+     "x": 640,
+     "y": 320,
+     "font": "Archivo Black",
+     "weight": 400,
+     "size": 96,
+     "width": 760,
+     "color": "#FFFFFF",
+     "background": "#FF5D8F",
+     "padding": 40,
+     "radius": 60,
+     "rotate": 4,
+     "start": 0.35,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.6,
+      "ease": "easeOutBack",
+      "delay": 0
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.5,
+      "speed": 1.2
+     }
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Menu heroes",
+   "duration": 2.6,
+   "transition": {
+    "type": "slide-left",
+    "duration": 0.3,
+    "ease": "easeInOutCubic"
+   },
+   "camera": {
+    "zoom": [
+     [
+      0,
+      1
+     ],
+     [
+      2.6,
+      1.04,
+      "easeInOutSine"
+     ]
+    ]
+   },
+   "notes": "Two generated drink shots in arch masks drop in with an overshoot (y keyframes with easeOutBack) and opposite tilts, round price stickers pop on their corners and name pills slide up; floating tapioca pearls (shapes) add depth.",
+   "layers": [
+    {
+     "id": "s2-bg",
+     "type": "background",
+     "fill": "#FFF4E6",
+     "gradient": {
+      "type": "radial",
+      "stops": [
+       [
+        "#FFFFFF",
+        0
+       ],
+       [
+        "#FFF4E6",
+        0.6
+       ],
+       [
+        "#FFE3C8",
+        1
+       ]
+      ]
+     },
+     "grain": 0.25
+    },
+    {
+     "id": "s2-pearl-1",
+     "type": "shape",
+     "shape": "circle",
+     "x": 120,
+     "y": 250,
+     "width": 46,
+     "height": 46,
+     "fill": "#3B1F12",
+     "opacity": 0.85,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.5
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 1.2
+     }
+    },
+    {
+     "id": "s2-pearl-2",
+     "type": "shape",
+     "shape": "circle",
+     "x": 975,
+     "y": 330,
+     "width": 34,
+     "height": 34,
+     "fill": "#3B1F12",
+     "opacity": 0.85,
+     "start": 0.2,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.5
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 1,
+      "speed": 1.3
+     }
+    },
+    {
+     "id": "s2-pearl-3",
+     "type": "shape",
+     "shape": "circle",
+     "x": 540,
+     "y": 980,
+     "width": 40,
+     "height": 40,
+     "fill": "#3B1F12",
+     "opacity": 0.85,
+     "start": 0.4,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.5
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 1,
+      "speed": 0.8
+     }
+    },
+    {
+     "id": "s2-headline",
+     "type": "text",
+     "text": "Shaken fresh, all weekend.",
+     "x": 540,
+     "y": 105,
+     "font": "Archivo Black",
+     "weight": 400,
+     "size": 60,
+     "width": 940,
+     "color": "#3B1F12",
+     "enter": {
+      "preset": "words-pop",
+      "duration": 0.45,
+      "stagger": 0.07,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s2-taro",
+     "type": "image",
+     "x": 305,
+     "y": 560,
+     "width": 400,
+     "height": 560,
+     "mask": "arch",
+     "rotate": -4,
+     "prompt": "studio food photograph of a creamy lavender taro milk tea in a plain unbranded clear cup with tapioca pearls and a cloud of cream foam on top, soft pastel pink seamless background, bright soft daylight, gentle shadow, appetizing commercial beverage photography",
+     "shadow": "0 30px 50px rgba(59,31,18,0.3)",
+     "start": 0.15,
+     "keyframes": {
+      "y": [
+       [
+        0.15,
+        -300
+       ],
+       [
+        0.8,
+        560,
+        "easeOutBack"
+       ]
+      ]
+     },
+     "loop": {
+      "preset": "kenburns",
+      "amount": 0.5
+     }
+    },
+    {
+     "id": "s2-mango",
+     "type": "image",
+     "x": 775,
+     "y": 560,
+     "width": 400,
+     "height": 560,
+     "mask": "arch",
+     "rotate": 4,
+     "prompt": "studio food photograph of a vibrant mango fruit tea with fresh mango cubes and ice in a plain unbranded clear cup, condensation, warm sunny yellow seamless background, bright soft daylight, gentle shadow, appetizing commercial beverage photography",
+     "shadow": "0 30px 50px rgba(59,31,18,0.3)",
+     "start": 0.3,
+     "keyframes": {
+      "y": [
+       [
+        0.3,
+        -300
+       ],
+       [
+        0.95,
+        560,
+        "easeOutBack"
+       ]
+      ]
+     },
+     "loop": {
+      "preset": "kenburns",
+      "amount": 0.5
+     }
+    },
+    {
+     "id": "s2-tag-taro",
+     "type": "shape",
+     "shape": "circle",
+     "x": 470,
+     "y": 330,
+     "width": 150,
+     "height": 150,
+     "fill": "#FF5D8F",
+     "shadow": "0 12px 24px rgba(59,31,18,0.25)",
+     "start": 0.9,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.8,
+      "ease": "easeOutElastic",
+      "delay": 0
+     },
+     "loop": {
+      "preset": "sway",
+      "amount": 0.8
+     }
+    },
+    {
+     "id": "s2-tag-taro-text",
+     "type": "text",
+     "text": "$5.50",
+     "x": 470,
+     "y": 330,
+     "font": "Archivo Black",
+     "weight": 400,
+     "size": 40,
+     "width": 150,
+     "color": "#FFFFFF",
+     "start": 0.9,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.8,
+      "ease": "easeOutElastic",
+      "delay": 0
+     },
+     "loop": {
+      "preset": "sway",
+      "amount": 0.8
+     }
+    },
+    {
+     "id": "s2-tag-mango",
+     "type": "shape",
+     "shape": "circle",
+     "x": 940,
+     "y": 330,
+     "width": 150,
+     "height": 150,
+     "fill": "#FFB627",
+     "shadow": "0 12px 24px rgba(59,31,18,0.25)",
+     "start": 1.05,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.8,
+      "ease": "easeOutElastic",
+      "delay": 0
+     },
+     "loop": {
+      "preset": "sway",
+      "amount": 0.8,
+      "speed": 1.2
+     }
+    },
+    {
+     "id": "s2-tag-mango-text",
+     "type": "text",
+     "text": "$5.90",
+     "x": 940,
+     "y": 330,
+     "font": "Archivo Black",
+     "weight": 400,
+     "size": 40,
+     "width": 150,
+     "color": "#3B1F12",
+     "start": 1.05,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.8,
+      "ease": "easeOutElastic",
+      "delay": 0
+     },
+     "loop": {
+      "preset": "sway",
+      "amount": 0.8,
+      "speed": 1.2
+     }
+    },
+    {
+     "id": "s2-name-taro",
+     "type": "text",
+     "text": "Taro Cloud",
+     "x": 305,
+     "y": 900,
+     "font": "Poppins",
+     "weight": 700,
+     "size": 40,
+     "width": 400,
+     "color": "#FFF4E6",
+     "background": "#3B1F12",
+     "padding": 28,
+     "radius": 40,
+     "start": 1.1,
+     "enter": {
+      "preset": "rise",
+      "duration": 0.45,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s2-name-mango",
+     "type": "text",
+     "text": "Mango Burst",
+     "x": 775,
+     "y": 900,
+     "font": "Poppins",
+     "weight": 700,
+     "size": 40,
+     "width": 400,
+     "color": "#FFF4E6",
+     "background": "#3B1F12",
+     "padding": 28,
+     "radius": 40,
+     "start": 1.2,
+     "enter": {
+      "preset": "rise",
+      "duration": 0.45,
+      "ease": "easeOutBack"
+     }
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Offer reveal",
+   "duration": 2.8,
+   "transition": {
+    "type": "zoom",
+    "duration": 0.3,
+    "ease": "easeInOutCubic"
+   },
+   "camera": {
+    "zoom": [
+     [
+      0,
+      1.1
+     ],
+     [
+      0.5,
+      1.1
+     ],
+     [
+      0.75,
+      1,
+      "easeOutBack"
+     ],
+     [
+      2.8,
+      1.03
+     ]
+    ],
+    "rotate": [
+     [
+      0.45,
+      0
+     ],
+     [
+      0.55,
+      -1.5
+     ],
+     [
+      0.75,
+      0,
+      "easeOutBack"
+     ]
+    ]
+   },
+   "notes": "Promo slam: the BUY 1 GET 1 lockup pops with an elastic ease exactly on the beat while a shockwave and confetti burst from the same moment and the camera kicks; a countdown strip (ui layer, data-count digits) ticks into place underneath.",
+   "layers": [
+    {
+     "id": "s3-bg",
+     "type": "background",
+     "fill": "#FF5D8F",
+     "gradient": {
+      "type": "radial",
+      "stops": [
+       [
+        "#FF8FB1",
+        0
+       ],
+       [
+        "#FF5D8F",
+        0.55
+       ],
+       [
+        "#E23E73",
+        1
+       ]
+      ]
+     },
+     "animate": "pulse",
+     "grain": 0.25,
+     "vignette": 0.25
+    },
+    {
+     "id": "s3-rays",
+     "type": "effect",
+     "effect": "rays",
+     "colors": [
+      "#FFE2EC",
+      "#FFFFFF"
+     ],
+     "density": 1,
+     "opacity": 0.35,
+     "blend": "screen"
+    },
+    {
+     "id": "s3-label",
+     "type": "text",
+     "text": "THIS WEEKEND ONLY",
+     "x": 540,
+     "y": 140,
+     "font": "Poppins",
+     "weight": 800,
+     "size": 36,
+     "letterSpacing": 0.22,
+     "color": "#FF5D8F",
+     "background": "#FFF4E6",
+     "padding": 26,
+     "radius": 40,
+     "enter": {
+      "preset": "drop",
+      "duration": 0.5,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s3-shock",
+     "type": "effect",
+     "effect": "shockwave",
+     "x": 540,
+     "y": 460,
+     "width": 1080,
+     "height": 1080,
+     "colors": [
+      "#FFFFFF",
+      "#FFE2B5"
+     ],
+     "start": 0.45,
+     "opacity": 0.9,
+     "blend": "screen"
+    },
+    {
+     "id": "s3-offer",
+     "type": "text",
+     "text": "BUY 1\nGET 1",
+     "x": 540,
+     "y": 450,
+     "font": "Archivo Black",
+     "weight": 400,
+     "size": 200,
+     "lineHeight": 0.9,
+     "color": "#FFF4E6",
+     "textShadow": "0 10px 0 #3B1F12",
+     "start": 0.45,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.8,
+      "ease": "easeOutElastic"
+     },
+     "loop": {
+      "preset": "pulse",
+      "amount": 0.4,
+      "speed": 1.83
+     }
+    },
+    {
+     "id": "s3-free",
+     "type": "shape",
+     "shape": "star",
+     "x": 935,
+     "y": 235,
+     "width": 170,
+     "height": 170,
+     "fill": "#FFB627",
+     "rotate": 12,
+     "start": 0.75,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.8,
+      "ease": "easeOutElastic",
+      "delay": 0
+     },
+     "loop": {
+      "preset": "spin",
+      "amount": 0.15
+     }
+    },
+    {
+     "id": "s3-free-text",
+     "type": "text",
+     "text": "FREE",
+     "x": 935,
+     "y": 245,
+     "font": "Archivo Black",
+     "weight": 400,
+     "size": 34,
+     "width": 170,
+     "rotate": 12,
+     "color": "#3B1F12",
+     "start": 0.75,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.8,
+      "ease": "easeOutElastic",
+      "delay": 0
+     }
+    },
+    {
+     "id": "s3-confetti",
+     "type": "effect",
+     "effect": "confetti",
+     "colors": [
+      "#FFF4E6",
+      "#FFB627",
+      "#FFFFFF",
+      "#3B1F12",
+      "#FFD1E0"
+     ],
+     "density": 1.3,
+     "start": 0.45
+    },
+    {
+     "id": "s3-timer",
+     "type": "ui",
+     "device": "none",
+     "x": 540,
+     "y": 830,
+     "width": 760,
+     "viewport": {
+      "width": 520,
+      "height": 120
+     },
+     "screen": "transparent",
+     "start": 0.9,
+     "html": [
+      "<div class='t'><div data-at='0'><b data-count='2' data-at='0' data-dur='0.6'>0</b><small>DAYS</small></div><div data-at='0.1'>",
+      "<b data-count='14' data-at='0.1' data-dur='0.7'>0</b><small>HOURS</small></div><div data-at='0.2'><b data-count='36' data-at='0.2' data-dur='0.8'>0</b>",
+      "<small>MINUTES</small></div></div>"
+     ],
+     "css": [
+      ".t{display:flex;gap:14px;height:100%;font-family:Poppins}",
+      ".t div{flex:1;border-radius:22px;background:#3B1F12;color:#FFF4E6;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:scale(calc(.6 + var(--k)*.4));opacity:var(--k)}",
+      ".t b{font:400 54px 'Archivo Black';line-height:1}.t small{font:700 13px Poppins;letter-spacing:.2em;color:#FFB627;margin-top:6px}"
+     ]
+    },
+    {
+     "id": "s3-fine",
+     "type": "text",
+     "text": "Any two drinks · Sat & Sun",
+     "x": 540,
+     "y": 975,
+     "font": "Poppins",
+     "weight": 600,
+     "size": 34,
+     "color": "#FFF4E6",
+     "start": 1.2,
+     "enter": {
+      "preset": "fade",
+      "duration": 0.4
+     }
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "CTA + address",
+   "duration": 3.0,
+   "transition": {
+    "type": "push-up",
+    "duration": 0.3,
+    "ease": "easeInOutQuart"
+   },
+   "camera": {
+    "zoom": [
+     [
+      0,
+      1.05
+     ],
+     [
+      3,
+      1,
+      "easeOutCubic"
+     ]
+    ]
+   },
+   "notes": "Close on the hero photo again (same prompt, so the same image) under a warm brown scrim with light-leak; the round logo badge, wordmark, address card and order button cascade in with bouncy pops and the button keeps pulsing.",
+   "layers": [
+    {
+     "id": "s4-bg",
+     "type": "background",
+     "fill": "#3B1F12"
+    },
+    {
+     "id": "s4-photo",
+     "type": "image",
+     "x": 540,
+     "y": 540,
+     "width": 1080,
+     "height": 1080,
+     "fit": "cover",
+     "prompt": "close-up commercial food photograph of a brown sugar bubble tea in a tall plain unbranded clear cup, thick dark brown sugar syrup in tiger stripes over creamy white milk, a layer of glossy black tapioca pearls at the bottom, condensation drops, warm cafe background with golden bokeh, golden hour light, 50mm lens, appetizing",
+     "blur": 6,
+     "loop": {
+      "preset": "kenburns",
+      "amount": 0.6
+     }
+    },
+    {
+     "id": "s4-scrim",
+     "type": "shape",
+     "shape": "rect",
+     "x": 540,
+     "y": 540,
+     "width": 1080,
+     "height": 1080,
+     "fill": "rgba(59,31,18,0.72)"
+    },
+    {
+     "id": "s4-leak",
+     "type": "effect",
+     "effect": "light-leak",
+     "colors": [
+      "#FFB627",
+      "#FF5D8F",
+      "#FFD36B"
+     ],
+     "density": 0.8,
+     "opacity": 0.5,
+     "blend": "screen"
+    },
+    {
+     "id": "s4-badge",
+     "type": "shape",
+     "shape": "circle",
+     "x": 540,
+     "y": 215,
+     "width": 170,
+     "height": 170,
+     "fill": "#FF5D8F",
+     "glow": "rgba(255,93,143,0.6)",
+     "enter": {
+      "preset": "pop",
+      "duration": 0.8,
+      "ease": "easeOutElastic",
+      "delay": 0
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.5
+     }
+    },
+    {
+     "id": "s4-badge-mark",
+     "type": "text",
+     "text": "b",
+     "x": 540,
+     "y": 203,
+     "font": "Archivo Black",
+     "weight": 400,
+     "size": 120,
+     "width": 170,
+     "color": "#FFF4E6",
+     "enter": {
+      "preset": "pop",
+      "duration": 0.8,
+      "ease": "easeOutElastic",
+      "delay": 0
+     },
+     "loop": {
+      "preset": "float",
+      "amount": 0.5
+     }
+    },
+    {
+     "id": "s4-wordmark",
+     "type": "text",
+     "text": "bloom boba",
+     "x": 540,
+     "y": 385,
+     "font": "Archivo Black",
+     "weight": 400,
+     "size": 118,
+     "letterSpacing": -0.02,
+     "color": "#FFF4E6",
+     "start": 0.2,
+     "enter": {
+      "preset": "chars-pop",
+      "duration": 0.45,
+      "stagger": 0.035,
+      "ease": "easeOutBack"
+     }
+    },
+    {
+     "id": "s4-address",
+     "type": "text",
+     "text": "214 Linden St  ·  Open 11am–10pm",
+     "x": 540,
+     "y": 500,
+     "font": "Poppins",
+     "weight": 600,
+     "size": 40,
+     "color": "#FFE3C8",
+     "start": 0.5,
+     "enter": {
+      "preset": "rise",
+      "duration": 0.45
+     }
+    },
+    {
+     "id": "s4-btn",
+     "type": "shape",
+     "shape": "pill",
+     "x": 540,
+     "y": 660,
+     "width": 560,
+     "height": 124,
+     "fill": "#FFB627",
+     "shadow": "0 16px 30px rgba(0,0,0,0.35)",
+     "start": 0.75,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.6,
+      "ease": "easeOutBack",
+      "delay": 0
+     },
+     "loop": {
+      "preset": "pulse",
+      "amount": 0.6,
+      "speed": 1.83
+     }
+    },
+    {
+     "id": "s4-btn-text",
+     "type": "text",
+     "text": "Order ahead  →",
+     "x": 540,
+     "y": 660,
+     "font": "Poppins",
+     "weight": 800,
+     "size": 50,
+     "width": 560,
+     "color": "#3B1F12",
+     "start": 0.8,
+     "enter": {
+      "preset": "pop",
+      "duration": 0.6,
+      "ease": "easeOutBack",
+      "delay": 0
+     },
+     "loop": {
+      "preset": "pulse",
+      "amount": 0.6,
+      "speed": 1.83
+     }
+    },
+    {
+     "id": "s4-code",
+     "type": "text",
+     "text": "Show this ad or use code BOGO at checkout",
+     "x": 540,
+     "y": 790,
+     "font": "Poppins",
+     "weight": 500,
+     "size": 32,
+     "color": "#FFE3C8",
+     "start": 1.0,
+     "enter": {
+      "preset": "fade",
+      "duration": 0.5
+     }
+    },
+    {
+     "id": "s4-sparkles",
+     "type": "effect",
+     "effect": "sparkles",
+     "colors": [
+      "#FFFFFF",
+      "#FFE2B5"
+     ],
+     "density": 0.8,
+     "opacity": 0.8,
+     "blend": "screen",
+     "start": 0.75
+    }
+   ]
+  }
+ ],
+ "audio": [
+  {
+   "kind": "music",
+   "src": "lib:music/upbeat-pop",
+   "start": 0,
+   "volume": 0.75,
+   "fadeOut": 1.0
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/pop",
+   "start": 0.15,
+   "volume": 0.6
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/pop",
+   "start": 0.4,
+   "volume": 0.6
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/whoosh",
+   "start": 1.95,
+   "volume": 0.5
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/pop",
+   "start": 3.05,
+   "volume": 0.55
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/hit",
+   "start": 4.85,
+   "volume": 0.75
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/swoosh-up",
+   "start": 6.7,
+   "volume": 0.5
+  },
+  {
+   "kind": "sfx",
+   "src": "lib:sfx/click",
+   "start": 7.65,
+   "volume": 0.7
+  }
+ ]
+}

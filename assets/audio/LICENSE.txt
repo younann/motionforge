@@ -1,0 +1,12 @@
+MotionForge bundled audio library
+
+All music and sound effects in this directory (music/*.m4a, sfx/*.m4a) are
+synthesized from scratch by scripts/make-audio.mjs. No samples or third-party
+recordings are used.
+
+To the extent possible under law, the authors have dedicated all copyright and
+related and neighboring rights to these files to the public domain worldwide,
+under the Creative Commons CC0 1.0 Universal Public Domain Dedication.
+They are distributed without any warranty.
+
+Full legal text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
